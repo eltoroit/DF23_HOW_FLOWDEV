@@ -1,46 +1,14 @@
 {
-	"fetched": 5,
+	"fetched": 1,
 	"records": [
 		{
 			"attributes": {
 				"type": "RecordType",
-				"url": "/services/data/v56.0/sobjects/RecordType/012DJ000001BVwxYAG"
+				"url": "/services/data/v57.0/sobjects/RecordType/0128I0000001HIlQAM"
 			},
-			"Id": "012DJ000001BVwxYAG",
-			"DeveloperName": "Customer"
-		},
-		{
-			"attributes": {
-				"type": "RecordType",
-				"url": "/services/data/v56.0/sobjects/RecordType/012DJ000001BVwyYAG"
-			},
-			"Id": "012DJ000001BVwyYAG",
-			"DeveloperName": "Service_Vendor"
-		},
-		{
-			"attributes": {
-				"type": "RecordType",
-				"url": "/services/data/v56.0/sobjects/RecordType/012DJ000001BVwzYAG"
-			},
-			"Id": "012DJ000001BVwzYAG",
+			"Id": "0128I0000001HIlQAM",
 			"DeveloperName": "Family"
-		},
-		{
-			"attributes": {
-				"type": "RecordType",
-				"url": "/services/data/v56.0/sobjects/RecordType/012DJ000001BVx0YAG"
-			},
-			"Id": "012DJ000001BVx0YAG",
-			"DeveloperName": "Standard"
-		},
-		{
-			"attributes": {
-				"type": "RecordType",
-				"url": "/services/data/v56.0/sobjects/RecordType/012DJ000001BVx1YAG"
-			},
-			"Id": "012DJ000001BVx1YAG",
-			"DeveloperName": "Technician"
 		}
 	],
-	"total": 5
+	"total": 1
 }

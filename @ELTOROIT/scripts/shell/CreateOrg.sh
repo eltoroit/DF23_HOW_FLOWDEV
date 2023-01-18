@@ -31,7 +31,7 @@
 
 	# Permission Set names
 	# Sample: PACKAGES=("PS_01" "PS_02" "PS_03")
-	PERM_SETS=("HOW_DEV")
+	PERM_SETS=("HOW")
 
 	# Prepare scratch org for deployment. Some metadata needs to be deployed first.
 	# Sample: PREPARE_ORG=("@ELTOROIT/metadata/API/")

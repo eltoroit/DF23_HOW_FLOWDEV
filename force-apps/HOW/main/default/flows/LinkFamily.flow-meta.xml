@@ -50,7 +50,7 @@
     <processType>AutoLaunchedFlow</processType>
     <recordCreates>
         <name>Insert010</name>
-        <label>Insert010 Crear family record</label>
+        <label>Insert010 Create family record</label>
         <locationX>264</locationX>
         <locationY>575</locationY>
         <assignRecordIdToReference>Get010.Id</assignRecordIdToReference>

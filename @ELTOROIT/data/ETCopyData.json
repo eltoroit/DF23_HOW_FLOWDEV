@@ -3,15 +3,6 @@
   "orgDestination": "soDEMO",
   "sObjectsData": [
     {
-      "name": "Account",
-      "ignoreFields": "",
-      "externalIdField": null,
-      "twoPassReferenceFields": "",
-      "where": null,
-      "orderBy": null,
-      "maxRecords": -1
-    },
-    {
       "name": "Entitlement",
       "ignoreFields": "",
       "externalIdField": null,
@@ -27,50 +18,9 @@
       "where": null,
       "orderBy": null,
       "maxRecords": -1
-    },
-    {
-      "name": "Opportunity",
-      "ignoreFields": "",
-      "externalIdField": null,
-      "twoPassReferenceFields": "",
-      "where": null,
-      "orderBy": null,
-      "maxRecords": -1
-    },
-    {
-      "name": "Case",
-      "ignoreFields": "",
-      "externalIdField": null,
-      "twoPassReferenceFields": "",
-      "where": null,
-      "orderBy": null,
-      "maxRecords": -1
-    },
-    {
-      "name": "CaseComment",
-      "ignoreFields": "",
-      "externalIdField": null,
-      "twoPassReferenceFields": "",
-      "where": null,
-      "orderBy": null,
-      "maxRecords": -1
     }
   ],
   "sObjectsMetadata": [
-    {
-      "name": "User",
-      "matchBy": "Email",
-      "fieldsToExport": "FirstName,LastName,Email,Id",
-      "where": null,
-      "orderBy": "LastName"
-    },
-    {
-      "name": "Group",
-      "matchBy": "DeveloperName",
-      "fieldsToExport": "Id,DeveloperName",
-      "where": "Type = 'Queue'",
-      "orderBy": null
-    },
     {
       "name": "RecordType",
       "matchBy": "DeveloperName",
