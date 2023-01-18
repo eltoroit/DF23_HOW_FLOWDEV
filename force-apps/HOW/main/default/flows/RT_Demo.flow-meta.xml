@@ -14,7 +14,10 @@
                 <elementReference>contacts</elementReference>
             </value>
         </inputParameters>
-        <storeOutputAutomatically>true</storeOutputAutomatically>
+        <outputParameters>
+            <assignToReference>results</assignToReference>
+            <name>outputContact</name>
+        </outputParameters>
     </actionCalls>
     <apiVersion>57.0</apiVersion>
     <assignments>
@@ -73,5 +76,13 @@
         <isInput>false</isInput>
         <isOutput>false</isOutput>
         <objectType>Contact</objectType>
+    </variables>
+    <variables>
+        <name>results</name>
+        <apexClass>RT_DemoAE</apexClass>
+        <dataType>Apex</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
     </variables>
 </Flow>
