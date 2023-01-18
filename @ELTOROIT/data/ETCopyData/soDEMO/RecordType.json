@@ -4,22 +4,6 @@
 		{
 			"attributes": {
 				"type": "RecordType",
-				"url": "/services/data/v56.0/sobjects/RecordType/012DJ000001AlynYAC"
-			},
-			"Id": "012DJ000001AlynYAC",
-			"DeveloperName": "Customer"
-		},
-		{
-			"attributes": {
-				"type": "RecordType",
-				"url": "/services/data/v56.0/sobjects/RecordType/012DJ000001AlyoYAC"
-			},
-			"Id": "012DJ000001AlyoYAC",
-			"DeveloperName": "Service_Vendor"
-		},
-		{
-			"attributes": {
-				"type": "RecordType",
 				"url": "/services/data/v56.0/sobjects/RecordType/012DJ000001AlypYAC"
 			},
 			"Id": "012DJ000001AlypYAC",

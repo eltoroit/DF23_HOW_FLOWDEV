@@ -1,9 +1,13 @@
 {
   "packageDirectories": [
-    {
-      "path": "force-app",
-      "default": true
-    }
+		{
+			"path": "force-apps/HOW",
+			"default": true
+		},
+		{
+			"path": "force-apps/doNotDeploy",
+			"default": false
+		}
   ],
   "name": "v2",
   "namespace": "",

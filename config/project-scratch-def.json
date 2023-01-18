@@ -1,12 +1,14 @@
 {
-  "orgName": "aperez company",
-  "edition": "Developer",
-  "hasSampleData": false,
-  "features": [],
-  "lightningExperienceSettings": {
-    "enableS1DesktopEnabled": true
-  },
-  "mobileSettings": {
-    "enableS1EncryptedStoragePref2": false
-  }
+	"orgName": "aperez company",
+	"edition": "Developer",
+	"hasSampleData": false,
+	"features": [],
+	"settings": {
+		"lightningExperienceSettings": {
+			"enableS1DesktopEnabled": true
+		},
+		"mobileSettings": {
+			"enableS1EncryptedStoragePref2": false
+		}
+	}
 }
