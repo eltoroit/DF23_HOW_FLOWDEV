@@ -8,7 +8,7 @@
             <leftValueReference>$Record</leftValueReference>
             <type>InputTriggeringRecordInitial</type>
             <value>
-                <sobjectValue>{&quot;FirstName&quot;:&quot;Katelynn&quot;,&quot;LastName&quot;:&quot;Perez&quot;}</sobjectValue>
+                <sobjectValue>{&quot;FirstName&quot;:&quot;Andres&quot;,&quot;LastName&quot;:&quot;Perez&quot;}</sobjectValue>
             </value>
         </parameters>
     </testPoints>
@@ -19,6 +19,15 @@
                 <operator>EqualTo</operator>
                 <rightValue>
                     <stringValue>Perez</stringValue>
+                </rightValue>
+            </conditions>
+        </assertions>
+        <assertions>
+            <conditions>
+                <leftValueReference>Apex010.outputContact.myContact.FirstName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Andres</stringValue>
                 </rightValue>
             </conditions>
         </assertions>
