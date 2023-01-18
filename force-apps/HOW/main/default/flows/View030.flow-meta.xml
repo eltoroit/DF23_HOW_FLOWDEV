@@ -5,7 +5,7 @@
         <label>Apex010 Get families with contacts</label>
         <locationX>176</locationX>
         <locationY>278</locationY>
-        <actionName>QueryFamilies</actionName>
+        <actionName>UI_QueryFamilies</actionName>
         <actionType>apex</actionType>
         <connector>
             <targetReference>Screen010</targetReference>
@@ -102,17 +102,9 @@
     <status>Active</status>
     <variables>
         <name>familyTypes</name>
-        <apexClass>FamilyType</apexClass>
+        <apexClass>UI_FamilyTypeAE</apexClass>
         <dataType>Apex</dataType>
         <isCollection>true</isCollection>
-        <isInput>false</isInput>
-        <isOutput>false</isOutput>
-    </variables>
-    <variables>
-        <name>xxx</name>
-        <apexClass>FamilyTypes</apexClass>
-        <dataType>Apex</dataType>
-        <isCollection>false</isCollection>
         <isInput>false</isInput>
         <isOutput>false</isOutput>
     </variables>

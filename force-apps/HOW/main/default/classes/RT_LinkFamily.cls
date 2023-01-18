@@ -1,4 +1,4 @@
-public without sharing class LinkFamily {
+public without sharing class RT_LinkFamily {
 	@InvocableMethod(label='Link Families' description='Associates a contact with the corresponding family based on the last name' category='Contact')
 	public static List<Contact> linkFamily(List<Contact> contacts) {
 		Set<String> lastNames = new Set<String>();

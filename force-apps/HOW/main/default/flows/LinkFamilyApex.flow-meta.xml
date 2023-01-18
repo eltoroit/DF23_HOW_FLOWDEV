@@ -5,7 +5,7 @@
         <label>Apex010 Call apex to link contacts</label>
         <locationX>176</locationX>
         <locationY>335</locationY>
-        <actionName>LinkFamily</actionName>
+        <actionName>RT_LinkFamily</actionName>
         <actionType>apex</actionType>
         <connector>
             <targetReference>Update010</targetReference>

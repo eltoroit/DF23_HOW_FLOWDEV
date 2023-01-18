@@ -9,7 +9,7 @@
     </targets>
     <targetConfigs>
         <targetConfig targets="lightning__FlowScreen">
-            <property name="familyTypes" label="Family Types" type="apex://FamilyTypes" role="inputOnly"/>
+            <property name="familyTypes" label="Family Types" type="apex://UI_FamilyTypes" role="inputOnly"/>
         </targetConfig>
  </targetConfigs>
 </LightningComponentBundle>

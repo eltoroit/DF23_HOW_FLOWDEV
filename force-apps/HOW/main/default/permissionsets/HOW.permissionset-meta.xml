@@ -5,7 +5,7 @@
         <visible>true</visible>
     </applicationVisibilities>
     <classAccesses>
-        <apexClass>LinkFamily</apexClass>
+        <apexClass>RT_LinkFamily</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <fieldPermissions>

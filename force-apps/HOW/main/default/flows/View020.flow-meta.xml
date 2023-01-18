@@ -5,7 +5,7 @@
         <label>Apex010 Get families with contacts</label>
         <locationX>176</locationX>
         <locationY>278</locationY>
-        <actionName>QueryFamilies</actionName>
+        <actionName>UI_QueryFamilies</actionName>
         <actionType>apex</actionType>
         <connector>
             <targetReference>Screen010</targetReference>

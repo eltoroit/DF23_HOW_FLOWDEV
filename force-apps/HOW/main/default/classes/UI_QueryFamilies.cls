@@ -1,10 +1,10 @@
-public with sharing class QueryFamilies {
+public with sharing class UI_QueryFamilies {
 	@InvocableMethod(label='Get Families' description='Demonstrates calling Apex to get data' category='Contact')
 	public static List<FamilyResponse> getFamilies(List<FamilyRequest> familyRequests) {
 		// Initalize response
 		List<FamilyResponse> output = new List<FamilyResponse>();
 		FamilyResponse familyResponse = new FamilyResponse();
-		FamilyTypes response = new FamilyTypes();
+		UI_FamilyTypes response = new UI_FamilyTypes();
 		familyResponse.response = response;
 		output.add(familyResponse);
 
@@ -21,7 +21,7 @@ public with sharing class QueryFamilies {
 			ORDER BY LastName__c
 			LIMIT :familyRequest.countFamilies
 		]) {
-			FamilyType familyType = new FamilyType();
+			UI_FamilyTypeAE familyType = new UI_FamilyTypeAE();
 			familyType.record = family;
 			familyType.contacts = family.Contacts__r;
 			familyType.contactsCount = family.Contacts__r.size();
@@ -42,6 +42,6 @@ public with sharing class QueryFamilies {
 
 	public class FamilyResponse {
 		@InvocableVariable(label='Families output' description='Family records with related contacts')
-		public FamilyTypes response;
+		public UI_FamilyTypes response;
 	}
 }

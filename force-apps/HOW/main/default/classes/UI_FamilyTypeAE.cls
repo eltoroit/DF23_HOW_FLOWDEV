@@ -1,4 +1,4 @@
-public class FamilyType {
+public class UI_FamilyTypeAE {
 	@AuraEnabled
 	public Family__c record { get; set; }
 
