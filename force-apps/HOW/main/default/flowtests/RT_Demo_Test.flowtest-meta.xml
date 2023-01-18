@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowTest xmlns="http://soap.sforce.com/2006/04/metadata">
+    <flowApiName>RT_Demo</flowApiName>
+    <label>RT_Demo_Test</label>
+    <testPoints>
+        <elementApiName>Start</elementApiName>
+        <parameters>
+            <leftValueReference>$Record</leftValueReference>
+            <type>InputTriggeringRecordInitial</type>
+            <value>
+                <sobjectValue>{&quot;CleanStatus&quot;:&quot;Pending&quot;,&quot;DoNotCall&quot;:false,&quot;Family__c&quot;:&quot;a0004000003AjcWAAS&quot;,&quot;FirstName&quot;:&quot;Katelynn&quot;,&quot;HasOptedOutOfEmail&quot;:false,&quot;HasOptedOutOfFax&quot;:false,&quot;LastName&quot;:&quot;Perez&quot;,&quot;OwnerId&quot;:&quot;00504000002rhXpAAI&quot;,&quot;RecordTypeId&quot;:&quot;01204000000HpqIAAS&quot;,&quot;attributes&quot;:{&quot;type&quot;:{&quot;value&quot;:&quot;Contact&quot;}}}</sobjectValue>
+            </value>
+        </parameters>
+    </testPoints>
+    <testPoints>
+        <assertions>
+            <conditions>
+                <leftValueReference>Apex010.outputContact.myContact.LastName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Perez</stringValue>
+                </rightValue>
+            </conditions>
+        </assertions>
+        <elementApiName>Finish</elementApiName>
+    </testPoints>
+</FlowTest>

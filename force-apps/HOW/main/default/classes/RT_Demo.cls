@@ -1,13 +1,11 @@
-public with sharing class MyClass {
+public with sharing class RT_Demo {
 	@InvocableMethod(label='Sample' description='...' category='Contact')
 	public static List<Results> execute(List<Request> requests) {
 		List<Results> responseWrapper = new List<Results>();
-		for (Request request : requests) {
-			Results response = new Results();
-			response.outputContact = new MyClassAE();
-			response.outputContact.myContact = request.inputContacts[0];
-			responseWrapper.add(response);
-		}
+		Results response = new Results();
+		response.outputContact = new RT_DemoAE();
+		response.outputContact.myContact = requests[0].inputContacts[0];
+		responseWrapper.add(response);
 		return responseWrapper;
 	}
 
@@ -18,6 +16,6 @@ public with sharing class MyClass {
 
 	public class Results {
 		@InvocableVariable(label='Output Contact')
-		public MyClassAE outputContact;
+		public RT_DemoAE outputContact;
 	}
 }
