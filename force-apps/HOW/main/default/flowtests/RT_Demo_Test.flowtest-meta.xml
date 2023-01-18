@@ -15,7 +15,7 @@
     <testPoints>
         <assertions>
             <conditions>
-                <leftValueReference>Apex010.outputContact.myContact.LastName</leftValueReference>
+                <leftValueReference>results.myContact.LastName</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <stringValue>Perez</stringValue>
@@ -24,7 +24,7 @@
         </assertions>
         <assertions>
             <conditions>
-                <leftValueReference>Apex010.outputContact.myContact.FirstName</leftValueReference>
+                <leftValueReference>results.myContact.FirstName</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <stringValue>Andres</stringValue>
