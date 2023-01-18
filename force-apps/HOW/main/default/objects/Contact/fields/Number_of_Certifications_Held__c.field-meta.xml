@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Number_of_Certifications_Held__c</fullName>
+    <description>Number of certifications held by the contact.</description>
+    <externalId>false</externalId>
+    <label># of Certifications Held</label>
+    <summaryForeignKey>Certification_Held__c.Certified_Professional__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <type>Summary</type>
+</CustomField>
