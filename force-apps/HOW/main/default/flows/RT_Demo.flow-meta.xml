@@ -67,21 +67,6 @@
     </start>
     <status>Draft</status>
     <variables>
-        <name>contactAE</name>
-        <apexClass>RT_DemoAE</apexClass>
-        <dataType>Apex</dataType>
-        <isCollection>false</isCollection>
-        <isInput>false</isInput>
-        <isOutput>false</isOutput>
-    </variables>
-    <variables>
-        <name>ContactName</name>
-        <dataType>String</dataType>
-        <isCollection>false</isCollection>
-        <isInput>false</isInput>
-        <isOutput>false</isOutput>
-    </variables>
-    <variables>
         <name>contacts</name>
         <dataType>SObject</dataType>
         <isCollection>true</isCollection>
