@@ -22,7 +22,7 @@ public class RT_LinkFamily_Test {
 
 	@IsTest
 	public static void newContacts_WithDuplicate_NewLastNames() {
-		// createContacts(new List<String>{ 'LastName03', 'LastName03' }, false, 3);
+		createContacts(new List<String>{ 'LastName03', 'LastName03' }, false, 3);
 	}
 
 	@IsTest
