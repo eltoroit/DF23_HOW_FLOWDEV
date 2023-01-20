@@ -4,7 +4,7 @@ public without sharing class RT_LinkFamily {
 		Set<String> lastNames = new Set<String>();
 		Map<String, Family__c> mapFamiliesByLastName = new Map<String, Family__c>();
 
-		// Find contact's last name
+		// Find contact last names
 		for (Contact contact : contacts) {
 			lastNames.add(contact.LastName);
 			mapFamiliesByLastName.put(contact.LastName, null);
