@@ -4,7 +4,7 @@ public with sharing class UI_QueryFamilies {
 		// Initalize response
 		List<FamilyResponse> output = new List<FamilyResponse>();
 		FamilyResponse familyResponse = new FamilyResponse();
-		UI_FamilyTypes response = new UI_FamilyTypes();
+		UI_FamilyTypesAE response = new UI_FamilyTypesAE();
 		familyResponse.response = response;
 		output.add(familyResponse);
 
@@ -42,6 +42,6 @@ public with sharing class UI_QueryFamilies {
 
 	public class FamilyResponse {
 		@InvocableVariable(label='Families output' description='Family records with related contacts')
-		public UI_FamilyTypes response;
+		public UI_FamilyTypesAE response;
 	}
 }

@@ -1,8 +1,8 @@
-public class UI_FamilyTypes {
+public class UI_FamilyTypesAE {
 	@AuraEnabled
 	public List<UI_FamilyTypeAE> records { get; set; }
 
-	public UI_FamilyTypes() {
+	public UI_FamilyTypesAE() {
 		this.records = new List<UI_FamilyTypeAE>();
 	}
 
