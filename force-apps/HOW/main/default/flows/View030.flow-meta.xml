@@ -99,7 +99,7 @@
             <targetReference>Get010</targetReference>
         </connector>
     </start>
-    <status>Active</status>
+    <status>Draft</status>
     <variables>
         <name>familyTypes</name>
         <apexClass>UI_FamilyTypeAE</apexClass>

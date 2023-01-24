@@ -25,17 +25,26 @@ export default class ShowTreeGrid extends NavigationMixin(LightningElement) {
 	gridColumns = GRID_COLUMNS;
 
 	@api
+	validate() {
+		// let output = { isValid: true };
+		let output = {
+			isValid: false,
+			errorMessage: "You can't go past this screen!"
+		};
+		return output;
+	}
+
+	@api
 	get familyTypes() {
 		return this.records;
 	}
 	set familyTypes(value) {
 		if (value.records) {
 			this.records = value.records;
-			this.gridData = [];
-			this.records.forEach((familyType) => {
+			this.gridData = this.records.map((familyType) => {
 				const family = {
 					Id: familyType.record.Id,
-					LastName: familyType.record.LastName__c,
+					LastName: `${familyType.record.LastName__c} (${familyType.contacts.length} members)`,
 					_children: []
 				};
 				familyType.contacts.forEach((contact) => {
@@ -45,25 +54,20 @@ export default class ShowTreeGrid extends NavigationMixin(LightningElement) {
 						LastName: contact.LastName
 					});
 				});
-				this.gridData.push(family);
+				return family;
 			});
-			debugger;
 		}
 	}
 
 	onRowAction(event) {
-		debugger;
-		console.log(event.detail);
-		const action = event.detail.action;
 		const row = event.detail.row;
-		console.log(row);
+		const action = event.detail.action;
 		switch (action.name) {
 			case "navContact": {
 				this[NavigationMixin.Navigate]({
 					type: "standard__recordPage",
 					attributes: {
 						recordId: row.Id,
-						objectApiName: "Contact", // objectApiName is optional
 						actionName: "view"
 					}
 				});
