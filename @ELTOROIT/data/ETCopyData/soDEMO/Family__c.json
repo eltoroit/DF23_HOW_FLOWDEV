@@ -1,230 +1,110 @@
 {
-	"fetched": 28,
+	"fetched": 13,
 	"records": [
 		{
 			"attributes": {
 				"type": "Family__c",
-				"url": "/services/data/v57.0/sobjects/Family__c/a0003000002CyAwAAK"
+				"url": "/services/data/v57.0/sobjects/Family__c/a008K000001TkqbQAC"
 			},
-			"Id": "a0003000002CyAwAAK",
-			"LastName__c": "Frank"
-		},
-		{
-			"attributes": {
-				"type": "Family__c",
-				"url": "/services/data/v57.0/sobjects/Family__c/a0003000002CyAxAAK"
-			},
-			"Id": "a0003000002CyAxAAK",
-			"LastName__c": "Goodwin"
-		},
-		{
-			"attributes": {
-				"type": "Family__c",
-				"url": "/services/data/v57.0/sobjects/Family__c/a0003000002CyAyAAK"
-			},
-			"Id": "a0003000002CyAyAAK",
-			"LastName__c": "Haley"
-		},
-		{
-			"attributes": {
-				"type": "Family__c",
-				"url": "/services/data/v57.0/sobjects/Family__c/a0003000002CyAzAAK"
-			},
-			"Id": "a0003000002CyAzAAK",
-			"LastName__c": "Cervantes"
-		},
-		{
-			"attributes": {
-				"type": "Family__c",
-				"url": "/services/data/v57.0/sobjects/Family__c/a0003000002CyB0AAK"
-			},
-			"Id": "a0003000002CyB0AAK",
-			"LastName__c": "Radkova"
-		},
-		{
-			"attributes": {
-				"type": "Family__c",
-				"url": "/services/data/v57.0/sobjects/Family__c/a0003000002CyB1AAK"
-			},
-			"Id": "a0003000002CyB1AAK",
-			"LastName__c": "Drake"
-		},
-		{
-			"attributes": {
-				"type": "Family__c",
-				"url": "/services/data/v57.0/sobjects/Family__c/a0003000002CyB2AAK"
-			},
-			"Id": "a0003000002CyB2AAK",
-			"LastName__c": "Hatfield"
-		},
-		{
-			"attributes": {
-				"type": "Family__c",
-				"url": "/services/data/v57.0/sobjects/Family__c/a0003000002CyB3AAK"
-			},
-			"Id": "a0003000002CyB3AAK",
-			"LastName__c": "Hood"
-		},
-		{
-			"attributes": {
-				"type": "Family__c",
-				"url": "/services/data/v57.0/sobjects/Family__c/a0003000002CyB4AAK"
-			},
-			"Id": "a0003000002CyB4AAK",
-			"LastName__c": "Le"
-		},
-		{
-			"attributes": {
-				"type": "Family__c",
-				"url": "/services/data/v57.0/sobjects/Family__c/a0003000002CyB5AAK"
-			},
-			"Id": "a0003000002CyB5AAK",
-			"LastName__c": "Marquez"
-		},
-		{
-			"attributes": {
-				"type": "Family__c",
-				"url": "/services/data/v57.0/sobjects/Family__c/a0003000002CyB6AAK"
-			},
-			"Id": "a0003000002CyB6AAK",
-			"LastName__c": "Mccarty"
-		},
-		{
-			"attributes": {
-				"type": "Family__c",
-				"url": "/services/data/v57.0/sobjects/Family__c/a0003000002CyB7AAK"
-			},
-			"Id": "a0003000002CyB7AAK",
-			"LastName__c": "Mendoza"
-		},
-		{
-			"attributes": {
-				"type": "Family__c",
-				"url": "/services/data/v57.0/sobjects/Family__c/a0003000002CyB8AAK"
-			},
-			"Id": "a0003000002CyB8AAK",
-			"LastName__c": "Montes"
-		},
-		{
-			"attributes": {
-				"type": "Family__c",
-				"url": "/services/data/v57.0/sobjects/Family__c/a0003000002CyB9AAK"
-			},
-			"Id": "a0003000002CyB9AAK",
+			"Id": "a008K000001TkqbQAC",
 			"LastName__c": "Anderson"
 		},
 		{
 			"attributes": {
 				"type": "Family__c",
-				"url": "/services/data/v57.0/sobjects/Family__c/a0003000002CyBAAA0"
+				"url": "/services/data/v57.0/sobjects/Family__c/a008K000001TkqcQAC"
 			},
-			"Id": "a0003000002CyBAAA0",
-			"LastName__c": "Perez"
+			"Id": "a008K000001TkqcQAC",
+			"LastName__c": "Cervantes"
 		},
 		{
 			"attributes": {
 				"type": "Family__c",
-				"url": "/services/data/v57.0/sobjects/Family__c/a0003000002CyBBAA0"
+				"url": "/services/data/v57.0/sobjects/Family__c/a008K000001TkqdQAC"
 			},
-			"Id": "a0003000002CyBBAA0",
-			"LastName__c": "Bautista"
+			"Id": "a008K000001TkqdQAC",
+			"LastName__c": "Figueroa"
 		},
 		{
 			"attributes": {
 				"type": "Family__c",
-				"url": "/services/data/v57.0/sobjects/Family__c/a0003000002CyBCAA0"
+				"url": "/services/data/v57.0/sobjects/Family__c/a008K000001TkqeQAC"
 			},
-			"Id": "a0003000002CyBCAA0",
-			"LastName__c": "Bowers"
+			"Id": "a008K000001TkqeQAC",
+			"LastName__c": "Haley"
 		},
 		{
 			"attributes": {
 				"type": "Family__c",
-				"url": "/services/data/v57.0/sobjects/Family__c/a0003000002CyBDAA0"
+				"url": "/services/data/v57.0/sobjects/Family__c/a008K000001TkqfQAC"
 			},
-			"Id": "a0003000002CyBDAA0",
-			"LastName__c": "Morrison"
+			"Id": "a008K000001TkqfQAC",
+			"LastName__c": "Marquez"
 		},
 		{
 			"attributes": {
 				"type": "Family__c",
-				"url": "/services/data/v57.0/sobjects/Family__c/a0003000002CyBEAA0"
+				"url": "/services/data/v57.0/sobjects/Family__c/a008K000001TkqhQAC"
 			},
-			"Id": "a0003000002CyBEAA0",
-			"LastName__c": "Norman"
-		},
-		{
-			"attributes": {
-				"type": "Family__c",
-				"url": "/services/data/v57.0/sobjects/Family__c/a0003000002CyBFAA0"
-			},
-			"Id": "a0003000002CyBFAA0",
+			"Id": "a008K000001TkqhQAC",
 			"LastName__c": "Ortega"
 		},
 		{
 			"attributes": {
 				"type": "Family__c",
-				"url": "/services/data/v57.0/sobjects/Family__c/a0003000002CyBGAA0"
+				"url": "/services/data/v57.0/sobjects/Family__c/a008K000001TkqjQAC"
 			},
-			"Id": "a0003000002CyBGAA0",
-			"LastName__c": "Page"
-		},
-		{
-			"attributes": {
-				"type": "Family__c",
-				"url": "/services/data/v57.0/sobjects/Family__c/a0003000002CyBHAA0"
-			},
-			"Id": "a0003000002CyBHAA0",
+			"Id": "a008K000001TkqjQAC",
 			"LastName__c": "Pruitt"
 		},
 		{
 			"attributes": {
 				"type": "Family__c",
-				"url": "/services/data/v57.0/sobjects/Family__c/a0003000002CyBIAA0"
+				"url": "/services/data/v57.0/sobjects/Family__c/a008K000001TkqpQAC"
 			},
-			"Id": "a0003000002CyBIAA0",
+			"Id": "a008K000001TkqpQAC",
+			"LastName__c": "Pérez"
+		},
+		{
+			"attributes": {
+				"type": "Family__c",
+				"url": "/services/data/v57.0/sobjects/Family__c/a008K000001TkqkQAC"
+			},
+			"Id": "a008K000001TkqkQAC",
+			"LastName__c": "Radkova"
+		},
+		{
+			"attributes": {
+				"type": "Family__c",
+				"url": "/services/data/v57.0/sobjects/Family__c/a008K000001TkqlQAC"
+			},
+			"Id": "a008K000001TkqlQAC",
 			"LastName__c": "Ramirez"
 		},
 		{
 			"attributes": {
 				"type": "Family__c",
-				"url": "/services/data/v57.0/sobjects/Family__c/a0003000002CyBJAA0"
+				"url": "/services/data/v57.0/sobjects/Family__c/a008K000001TkqmQAC"
 			},
-			"Id": "a0003000002CyBJAA0",
+			"Id": "a008K000001TkqmQAC",
 			"LastName__c": "Ruiz"
 		},
 		{
 			"attributes": {
 				"type": "Family__c",
-				"url": "/services/data/v57.0/sobjects/Family__c/a0003000002CyBKAA0"
+				"url": "/services/data/v57.0/sobjects/Family__c/a008K000001TkqnQAC"
 			},
-			"Id": "a0003000002CyBKAA0",
+			"Id": "a008K000001TkqnQAC",
 			"LastName__c": "Scott"
 		},
 		{
 			"attributes": {
 				"type": "Family__c",
-				"url": "/services/data/v57.0/sobjects/Family__c/a0003000002CyBLAA0"
+				"url": "/services/data/v57.0/sobjects/Family__c/a008K000001TkqoQAC"
 			},
-			"Id": "a0003000002CyBLAA0",
-			"LastName__c": "Trujillo"
-		},
-		{
-			"attributes": {
-				"type": "Family__c",
-				"url": "/services/data/v57.0/sobjects/Family__c/a0003000002CyBMAA0"
-			},
-			"Id": "a0003000002CyBMAA0",
+			"Id": "a008K000001TkqoQAC",
 			"LastName__c": "Werner"
-		},
-		{
-			"attributes": {
-				"type": "Family__c",
-				"url": "/services/data/v57.0/sobjects/Family__c/a0003000002CyBNAA0"
-			},
-			"Id": "a0003000002CyBNAA0",
-			"LastName__c": "York"
 		}
 	],
-	"total": 28
+	"total": 13
 }
