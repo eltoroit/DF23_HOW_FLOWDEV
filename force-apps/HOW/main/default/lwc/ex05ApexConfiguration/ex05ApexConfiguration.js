@@ -3,13 +3,6 @@ import { api, LightningElement, track } from "lwc";
 export default class Ex05ApexConfiguration extends LightningElement {
 	_inputVariables;
 	_builderContext;
-	@track errors = {
-		hasErrors: false,
-		errorMessages: new Set(),
-		get messages() {
-			return Array.from(this.errorMessages).join(', ');
-		}
-	};
 
 	@track families = {
 		value: null,
@@ -68,12 +61,14 @@ export default class Ex05ApexConfiguration extends LightningElement {
 	@api
 	validate() {
 		let output = [];
-		this.errors.hasErrors = true;
 		if (!this.families.value) {
-			this.errors.hasErrors = true;
-			let errorMessage = "Family is a required field. Select a value";
-			output.push(errorMessage);
-			this.errors.errorMessages.add(errorMessage);
+			let errorString = "Family is a required field. Select a value";
+			output.push({
+				key: "families",
+				errorString
+			});
+			this.refs.families.setCustomValidity(errorString);
+			this.refs.families.reportValidity();
 		}
 		return output;
 	}
@@ -82,6 +77,10 @@ export default class Ex05ApexConfiguration extends LightningElement {
 		let newValue = event?.detail?.value;
 		this.families.value = newValue;
 		this.handleChange(newValue, "families", "reference");
+		if (this.families.value) {
+			this.refs.families.setCustomValidity("");
+			this.refs.families.reportValidity();
+		}
 	}
 
 	onCountFamiliesChange(event) {
