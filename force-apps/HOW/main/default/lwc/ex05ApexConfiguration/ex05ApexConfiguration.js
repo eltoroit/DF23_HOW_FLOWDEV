@@ -3,6 +3,13 @@ import { api, LightningElement, track } from "lwc";
 export default class Ex05ApexConfiguration extends LightningElement {
 	_inputVariables;
 	_builderContext;
+	@track errors = {
+		hasErrors: false,
+		errorMessages: new Set(),
+		get messages() {
+			return Array.from(this.errorMessages).join(', ');
+		}
+	};
 
 	@track families = {
 		value: null,
@@ -27,10 +34,14 @@ export default class Ex05ApexConfiguration extends LightningElement {
 		if (value) {
 			this._inputVariables = value;
 			console.log(this._inputVariables);
-			debugger;
-			this.families.value = this.inputVariables.find(({ name }) => name === "families")?.value;
 			this.countFamilies.value = this.inputVariables.find(({ name }) => name === "countFamilies")?.value;
 			this.countContacts.value = this.inputVariables.find(({ name }) => name === "countContacts")?.value;
+			let families = this.inputVariables.find(({ name }) => name === "families")?.value;
+			if (families) {
+				this.families.value = families;
+			} else {
+				this.families.value = "";
+			}
 		}
 	}
 
@@ -42,14 +53,29 @@ export default class Ex05ApexConfiguration extends LightningElement {
 		if (value) {
 			this._builderContext = value;
 			console.log(this._builderContext);
-			debugger;
 			this.families.options = this._builderContext.recordLookups.map((rl) => ({
 				value: rl.name,
 				label: rl.label,
 				description: rl.description
 			}));
-			this.families.value = this.families.options[0].value;
+			if (this.families.value === null) {
+				this.families.value = this.families.options[0].value;
+			}
+			this.families.options.unshift({ value: "", label: "None", description: "Blank" });
 		}
+	}
+
+	@api
+	validate() {
+		let output = [];
+		this.errors.hasErrors = true;
+		if (!this.families.value) {
+			this.errors.hasErrors = true;
+			let errorMessage = "Family is a required field. Select a value";
+			output.push(errorMessage);
+			this.errors.errorMessages.add(errorMessage);
+		}
+		return output;
 	}
 
 	onfamiliesChange(event) {
