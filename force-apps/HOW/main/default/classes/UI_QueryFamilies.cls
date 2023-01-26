@@ -1,5 +1,10 @@
 public with sharing class UI_QueryFamilies {
-	@InvocableMethod(label='Get Families' description='Demonstrates calling Apex to get data' category='Contact')
+	@InvocableMethod(
+		label='Get Families'
+		description='Demonstrates calling Apex to get data'
+		category='Contact'
+		configurationEditor='c-ex05-apex-configuration'
+	)
 	public static List<FamilyResponse> getFamilies(List<FamilyRequest> familyRequests) {
 		// Initalize response
 		List<FamilyResponse> output = new List<FamilyResponse>();
