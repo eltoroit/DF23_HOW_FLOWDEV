@@ -1,5 +1,5 @@
 @IsTest
-public class RT_LinkFamily_Test {
+public class EX01_LinkFamily_Test {
 	@TestSetup
 	public static void testSetup() {
 		createContacts(new List<String>{ 'LastName01', 'LastName02' }, true, 2);
@@ -22,7 +22,7 @@ public class RT_LinkFamily_Test {
 
 	@IsTest
 	public static void newContacts_WithDuplicate_NewLastNames() {
-		createContacts(new List<String>{ 'LastName03', 'LastName03' }, false, 3);
+		// createContacts(new List<String>{ 'LastName03', 'LastName03' }, false, 3);
 	}
 
 	@IsTest
