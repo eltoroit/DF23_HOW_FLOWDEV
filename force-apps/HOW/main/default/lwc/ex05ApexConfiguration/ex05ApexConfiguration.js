@@ -7,7 +7,7 @@ export default class Ex05ApexConfiguration extends LightningElement {
 		hasErrors: false,
 		errorMessages: new Set(),
 		get messages() {
-			return Array.from(this.errorMessages).join(', ');
+			return Array.from(this.errorMessages).join(", ");
 		}
 	};
 
@@ -70,10 +70,16 @@ export default class Ex05ApexConfiguration extends LightningElement {
 		let output = [];
 		this.errors.hasErrors = true;
 		if (!this.families.value) {
+			debugger;
 			this.errors.hasErrors = true;
-			let errorMessage = "Family is a required field. Select a value";
-			output.push(errorMessage);
-			this.errors.errorMessages.add(errorMessage);
+			let errorString = "Family is a required field. Select a value";
+			output.push({
+				key: "families",
+				errorString
+			});
+			this.refs.families.setCustomValidity(errorString);
+			this.refs.families.reportValidity();
+			this.errors.errorMessages.add(errorString);
 		}
 		return output;
 	}
