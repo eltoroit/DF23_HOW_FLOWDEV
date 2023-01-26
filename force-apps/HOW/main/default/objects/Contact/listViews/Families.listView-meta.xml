@@ -6,10 +6,5 @@
     <columns>Family__c</columns>
     <columns>FamilyLastName__c</columns>
     <filterScope>Everything</filterScope>
-    <filters>
-        <field>CONTACT.RECORDTYPE</field>
-        <operation>equals</operation>
-        <value>Contact.Family</value>
-    </filters>
     <label>Families</label>
 </ListView>

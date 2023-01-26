@@ -161,10 +161,6 @@
         <object>Family__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
-    <recordTypeVisibilities>
-        <recordType>Contact.Family</recordType>
-        <visible>true</visible>
-    </recordTypeVisibilities>
     <tabSettings>
         <tab>Family__c</tab>
         <visibility>Visible</visibility>

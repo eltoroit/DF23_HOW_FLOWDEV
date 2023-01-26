@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <actionCalls>
+        <description>Calls Apex to get related records, and returns the maximum number of records desired</description>
         <name>Apex010</name>
         <label>Apex010 Get families with contacts</label>
         <locationX>176</locationX>
@@ -14,7 +15,7 @@
         <inputParameters>
             <name>countFamilies</name>
             <value>
-                <numberValue>100.0</numberValue>
+                <numberValue>150.0</numberValue>
             </value>
         </inputParameters>
         <inputParameters>
@@ -26,7 +27,7 @@
         <inputParameters>
             <name>countContacts</name>
             <value>
-                <numberValue>100.0</numberValue>
+                <numberValue>10.0</numberValue>
             </value>
         </inputParameters>
         <storeOutputAutomatically>true</storeOutputAutomatically>
@@ -55,6 +56,7 @@
     </processMetadataValues>
     <processType>Flow</processType>
     <recordLookups>
+        <description>Queries all the family records</description>
         <name>Get010</name>
         <label>Get010 Find families</label>
         <locationX>176</locationX>
@@ -99,7 +101,7 @@
             <targetReference>Get010</targetReference>
         </connector>
     </start>
-    <status>Active</status>
+    <status>Draft</status>
     <variables>
         <name>familyTypes</name>
         <apexClass>UI_FamilyTypeAE</apexClass>

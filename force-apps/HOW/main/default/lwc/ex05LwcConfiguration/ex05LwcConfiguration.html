@@ -1,0 +1,15 @@
+<template>
+	<div class="slds-m-bottom_x-small">
+		<h2 class="slds-text-heading_medium slds-p-around_xx-small">Data</h2>
+		<div class="slds-p-around_xx-small">
+			<lightning-combobox
+				label="Data"
+				placeholder="Choose Apex provider"
+				value={familyTypes.value}
+				onchange={onfamilyTypesChange}
+				options={familyTypes.options}
+			>
+			</lightning-combobox>
+		</div>
+	</div>
+</template>

@@ -2,14 +2,13 @@
 <LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>55.0</apiVersion>
     <isExposed>true</isExposed>
-    <masterLabel>Best Component Ever</masterLabel>
-    <description>This is a demo component.</description>
+    <masterLabel>Family Tree Grid</masterLabel>
     <targets>
         <target>lightning__FlowScreen</target>
     </targets>
     <targetConfigs>
-        <targetConfig targets="lightning__FlowScreen">
-            <property name="familyTypes" label="Family Types" type="apex://UI_FamilyTypes" role="inputOnly"/>
+        <targetConfig targets="lightning__FlowScreen" configurationEditor="c-ex05-lwc-configuration">
+            <property name="familyTypes" label="Family Types" type="apex://UI_FamilyTypesAE" role="inputOnly"/>
         </targetConfig>
  </targetConfigs>
 </LightningComponentBundle>

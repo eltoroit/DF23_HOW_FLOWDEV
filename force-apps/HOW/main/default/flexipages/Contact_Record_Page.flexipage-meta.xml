@@ -17,16 +17,6 @@
                     <name>uiBehavior</name>
                     <value>readonly</value>
                 </fieldInstanceProperties>
-                <fieldItem>Record.RecordTypeId</fieldItem>
-                <identifier>RecordRecordTypeIdField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>readonly</value>
-                </fieldInstanceProperties>
                 <fieldItem>Record.Family__c</fieldItem>
                 <identifier>RecordFamily_cField</identifier>
             </fieldInstance>
@@ -75,9 +65,6 @@
                         </valueListItems>
                         <valueListItems>
                             <value>XClean</value>
-                        </valueListItems>
-                        <valueListItems>
-                            <value>ChangeRecordType</value>
                         </valueListItems>
                         <valueListItems>
                             <value>Share</value>

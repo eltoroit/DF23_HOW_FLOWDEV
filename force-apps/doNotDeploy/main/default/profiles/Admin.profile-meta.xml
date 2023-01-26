@@ -43,7 +43,7 @@
     <applicationVisibilities>
         <application>standard__LightningSales</application>
         <default>false</default>
-        <visible>true</visible>
+        <visible>false</visible>
     </applicationVisibilities>
     <applicationVisibilities>
         <application>standard__Chatter</application>
@@ -72,16 +72,7 @@
     </applicationVisibilities>
     <custom>false</custom>
     <layoutAssignments>
-        <layout>Contact-Contact Layout</layout>
+        <layout>Contact-Family</layout>
     </layoutAssignments>
-    <layoutAssignments>
-        <layout>Contact-Contact Layout</layout>
-        <recordType>Contact.Family</recordType>
-    </layoutAssignments>
-    <recordTypeVisibilities>
-        <default>true</default>
-        <recordType>Contact.Family</recordType>
-        <visible>true</visible>
-    </recordTypeVisibilities>
     <userLicense>Salesforce</userLicense>
 </Profile>

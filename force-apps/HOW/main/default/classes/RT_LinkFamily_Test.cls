@@ -41,8 +41,6 @@ public class RT_LinkFamily_Test {
 	}
 
 	private static void createContacts(List<String> lastNames, Boolean isTestSetup, Integer expectedAfter) {
-		Id recTypeId = Schema.SObjectType.Contact.getRecordTypeInfosByDeveloperName().get('Family').getRecordTypeId();
-
 		// Validate the start state
 		Integer expectedBefore = isTestSetup ? 0 : 2;
 		List<Family__c> families = [SELECT Id FROM Family__c];
@@ -52,7 +50,7 @@ public class RT_LinkFamily_Test {
 		// Create contact records from the lastnames given
 		List<Contact> contacts = new List<Contact>();
 		for (String lastName : lastNames) {
-			contacts.add(new Contact(LastName = lastName, RecordTypeId = recTypeId));
+			contacts.add(new Contact(LastName = lastName));
 		}
 		insert contacts;
 		Test.stopTest();
@@ -68,10 +66,8 @@ public class RT_LinkFamily_Test {
 	}
 
 	private static void updateContacts(String oldLastName, String newLastName) {
-		Id recTypeId = Schema.SObjectType.Contact.getRecordTypeInfosByDeveloperName().get('Family').getRecordTypeId();
-
 		// Find the family contact with the old last name (assuming one because no duplicate records)
-		Contact oldContact = [SELECT Id FROM Contact WHERE LastName = :oldLastName AND RecordTypeId = :recTypeId];
+		Contact oldContact = [SELECT Id FROM Contact WHERE LastName = :oldLastName];
 
 		Test.startTest();
 		// Update to the new last name
