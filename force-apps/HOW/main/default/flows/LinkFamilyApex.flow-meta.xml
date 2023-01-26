@@ -58,7 +58,7 @@
         <connector>
             <targetReference>Apex010</targetReference>
         </connector>
-        <filterFormula>{!$Record.RecordType.DeveloperName} = &quot;Family&quot; &amp;&amp; {!$Record.LastName} != null &amp;&amp; ({!$Record.Family__c} == null || {!$Record.LastName} != {!$Record.Family__r.LastName__c})</filterFormula>
+        <filterFormula>{!$Record.LastName} != null &amp;&amp; ({!$Record.Family__c} == null || {!$Record.LastName} != {!$Record.Family__r.LastName__c})</filterFormula>
         <object>Contact</object>
         <recordTriggerType>CreateAndUpdate</recordTriggerType>
         <triggerType>RecordAfterSave</triggerType>
