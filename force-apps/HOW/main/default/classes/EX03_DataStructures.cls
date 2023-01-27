@@ -10,12 +10,12 @@ public with sharing class EX03_DataStructures {
 	}
 
 	public class Request {
-		@InvocableVariable(label='Input Contact' required='true')
+		@InvocableVariable(label='Input Contacts' required='true')
 		public List<Contact> inputContacts;
 	}
 
 	public class Results {
-		@InvocableVariable(label='Output Contact')
+		@InvocableVariable(label='Output Contacts')
 		public EX03_DataStructuresAuraEnabled outputContact;
 	}
 }
