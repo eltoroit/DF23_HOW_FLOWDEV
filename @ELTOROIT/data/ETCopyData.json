@@ -27,15 +27,7 @@
       "orderBy": "LastName__c"
     }
   ],
-  "sObjectsMetadata": [
-    {
-      "name": "RecordType",
-      "matchBy": "DeveloperName",
-      "fieldsToExport": "Id,DeveloperName",
-      "where": null,
-      "orderBy": null
-    }
-  ],
+  "sObjectsMetadata": [],
   "rootFolder": "ETCopyData",
   "includeAllCustom": false,
   "customObjectsToIgnore": null,
