@@ -1,9 +1,9 @@
-public with sharing class RT_Demo {
+public with sharing class EX03_DataStructures {
 	@InvocableMethod(label='Sample' description='...' category='Contact')
 	public static List<Results> execute(List<Request> requests) {
 		List<Results> responseWrapper = new List<Results>();
 		Results response = new Results();
-		response.outputContact = new RT_DemoAE();
+		response.outputContact = new EX03_DataStructuresAuraEnabled();
 		response.outputContact.myContact = requests[0].inputContacts[0];
 		responseWrapper.add(response);
 		return responseWrapper;
@@ -16,6 +16,6 @@ public with sharing class RT_Demo {
 
 	public class Results {
 		@InvocableVariable(label='Output Contact')
-		public RT_DemoAE outputContact;
+		public EX03_DataStructuresAuraEnabled outputContact;
 	}
 }

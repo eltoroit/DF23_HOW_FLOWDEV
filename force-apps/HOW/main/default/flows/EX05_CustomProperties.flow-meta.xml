@@ -6,7 +6,7 @@
         <label>Apex010 Get families with contacts</label>
         <locationX>176</locationX>
         <locationY>278</locationY>
-        <actionName>UI_QueryFamilies</actionName>
+        <actionName>EX04_QueryFamilies</actionName>
         <actionType>apex</actionType>
         <connector>
             <targetReference>Screen010</targetReference>
@@ -79,7 +79,7 @@
         <allowPause>true</allowPause>
         <fields>
             <name>LWC010</name>
-            <extensionName>c:showTreeGrid</extensionName>
+            <extensionName>c:ex04TreeGrid</extensionName>
             <fieldType>ComponentInstance</fieldType>
             <inputParameters>
                 <name>familyTypes</name>
@@ -104,7 +104,7 @@
     <status>Draft</status>
     <variables>
         <name>familyTypes</name>
-        <apexClass>UI_FamilyTypeAE</apexClass>
+        <apexClass>EX04_FamilyTypeAuraEnabled</apexClass>
         <dataType>Apex</dataType>
         <isCollection>true</isCollection>
         <isInput>false</isInput>

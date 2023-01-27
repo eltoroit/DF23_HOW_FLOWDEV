@@ -5,11 +5,11 @@
         <visible>true</visible>
     </applicationVisibilities>
     <classAccesses>
-        <apexClass>RT_Demo</apexClass>
+        <apexClass>EX02_LinkFamily</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>RT_LinkFamily</apexClass>
+        <apexClass>EX03_DataStructures</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <fieldPermissions>
