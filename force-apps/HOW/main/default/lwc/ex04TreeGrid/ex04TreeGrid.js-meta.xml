@@ -8,7 +8,7 @@
     </targets>
     <targetConfigs>
         <targetConfig targets="lightning__FlowScreen" configurationEditor="c-ex05-lwc-configuration">
-            <property name="familyTypes" label="Family Types" type="apex://UI_FamilyTypesAE" role="inputOnly"/>
+            <property name="familyTypes" label="Family Types" type="apex://EX04_FamilyTypeCollectionAuraEnabled" role="inputOnly"/>
         </targetConfig>
  </targetConfigs>
 </LightningComponentBundle>

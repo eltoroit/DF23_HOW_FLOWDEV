@@ -19,7 +19,7 @@ const GRID_COLUMNS = [
 	}
 ];
 
-export default class ShowTreeGrid extends NavigationMixin(LightningElement) {
+export default class Ex04TreeGrid extends NavigationMixin(LightningElement) {
 	records;
 	gridData = [];
 	gridColumns = GRID_COLUMNS;

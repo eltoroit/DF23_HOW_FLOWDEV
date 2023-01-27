@@ -1,49 +1,41 @@
 {
-	"orgSource": "soDEMO",
-	"orgDestination": "soDEMO",
-	"sObjectsData": [
-		{
-			"name": "Entitlement",
-			"ignoreFields": "",
-			"externalIdField": null,
-			"twoPassReferenceFields": "",
-			"where": null,
-			"orderBy": null
-		},
-		{
-			"name": "Contact",
-			"ignoreFields": "",
-			"externalIdField": null,
-			"twoPassReferenceFields": "",
-			"where": null,
-			"orderBy": "LastName"
-		},
-		{
-			"name": "Family__c",
-			"ignoreFields": "",
-			"externalIdField": null,
-			"twoPassReferenceFields": "",
-			"where": null,
-			"orderBy": "LastName__c"
-		}
-	],
-	"sObjectsMetadata": [
-		{
-			"name": "RecordType",
-			"matchBy": "DeveloperName",
-			"fieldsToExport": "Id,DeveloperName",
-			"where": null,
-			"orderBy": null
-		}
-	],
-	"rootFolder": "ETCopyData",
-	"includeAllCustom": false,
-	"customObjectsToIgnore": null,
-	"stopOnErrors": false,
-	"ignoreFields": "OwnerId, CreatedBy, CreatedDate, CurrencyIsoCode",
-	"copyToProduction": false,
-	"twoPassReferenceFields": null,
-	"deleteDestination": true,
-	"useBulkAPI": false,
-	"bulkPollingTimeout": null
+  "orgSource": "soDEMO",
+  "orgDestination": "soDEMO",
+  "sObjectsData": [
+    {
+      "name": "Entitlement",
+      "ignoreFields": "",
+      "externalIdField": null,
+      "twoPassReferenceFields": "",
+      "where": null,
+      "orderBy": null
+    },
+    {
+      "name": "Contact",
+      "ignoreFields": "",
+      "externalIdField": null,
+      "twoPassReferenceFields": "",
+      "where": null,
+      "orderBy": "LastName"
+    },
+    {
+      "name": "Family__c",
+      "ignoreFields": "",
+      "externalIdField": null,
+      "twoPassReferenceFields": "",
+      "where": null,
+      "orderBy": "LastName__c"
+    }
+  ],
+  "sObjectsMetadata": [],
+  "rootFolder": "ETCopyData",
+  "includeAllCustom": false,
+  "customObjectsToIgnore": null,
+  "stopOnErrors": false,
+  "ignoreFields": "OwnerId, CreatedBy, CreatedDate, CurrencyIsoCode",
+  "copyToProduction": false,
+  "twoPassReferenceFields": null,
+  "deleteDestination": true,
+  "useBulkAPI": false,
+  "bulkPollingTimeout": null
 }

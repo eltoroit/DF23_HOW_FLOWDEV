@@ -5,7 +5,7 @@
         <label>Apex010 Get families with contacts</label>
         <locationX>176</locationX>
         <locationY>278</locationY>
-        <actionName>UI_QueryFamilies</actionName>
+        <actionName>EX04_QueryFamilies</actionName>
         <actionType>apex</actionType>
         <connector>
             <targetReference>Screen010</targetReference>
@@ -34,7 +34,7 @@
     <apiVersion>56.0</apiVersion>
     <environments>Default</environments>
     <interviewLabel>View020 {!$Flow.CurrentDateTime}</interviewLabel>
-    <label>View020</label>
+    <label>EX04 - TreeGrid</label>
     <loops>
         <name>Loop010</name>
         <label>Loop010 For each FamilyType</label>

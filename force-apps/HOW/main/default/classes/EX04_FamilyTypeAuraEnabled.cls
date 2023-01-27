@@ -1,4 +1,4 @@
-public class UI_FamilyTypeAE {
+public class EX04_FamilyTypeAuraEnabled {
 	@AuraEnabled
 	public Family__c record { get; set; }
 

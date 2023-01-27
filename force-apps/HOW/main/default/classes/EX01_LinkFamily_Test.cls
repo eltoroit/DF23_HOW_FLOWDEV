@@ -1,5 +1,5 @@
 @IsTest
-public class RT_LinkFamily_Test {
+public class EX01_LinkFamily_Test {
 	@TestSetup
 	public static void testSetup() {
 		createContacts(new List<String>{ 'LastName01', 'LastName02' }, true, 2);

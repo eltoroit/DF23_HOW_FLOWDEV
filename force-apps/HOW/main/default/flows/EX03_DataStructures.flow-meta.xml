@@ -5,7 +5,7 @@
         <label>Apex010</label>
         <locationX>176</locationX>
         <locationY>455</locationY>
-        <actionName>RT_Demo</actionName>
+        <actionName>EX03_DataStructures</actionName>
         <actionType>apex</actionType>
         <flowTransactionModel>CurrentTransaction</flowTransactionModel>
         <inputParameters>
@@ -37,8 +37,8 @@
         </connector>
     </assignments>
     <environments>Default</environments>
-    <interviewLabel>RT_Demo {!$Flow.CurrentDateTime}</interviewLabel>
-    <label>RT_Demo</label>
+    <interviewLabel>EX03_DataStructures {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>EX03_DataStructures</label>
     <processMetadataValues>
         <name>BuilderType</name>
         <value>
@@ -79,7 +79,7 @@
     </variables>
     <variables>
         <name>results</name>
-        <apexClass>RT_DemoAE</apexClass>
+        <apexClass>EX03_DataStructuresAuraEnabled</apexClass>
         <dataType>Apex</dataType>
         <isCollection>false</isCollection>
         <isInput>false</isInput>
