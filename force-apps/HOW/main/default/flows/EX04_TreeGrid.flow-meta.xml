@@ -34,7 +34,7 @@
     <apiVersion>56.0</apiVersion>
     <environments>Default</environments>
     <interviewLabel>View020 {!$Flow.CurrentDateTime}</interviewLabel>
-    <label>View020</label>
+    <label>EX04 - TreeGrid</label>
     <loops>
         <name>Loop010</name>
         <label>Loop010 For each FamilyType</label>

@@ -35,7 +35,7 @@
     <apiVersion>56.0</apiVersion>
     <environments>Default</environments>
     <interviewLabel>View030 {!$Flow.CurrentDateTime}</interviewLabel>
-    <label>View030</label>
+    <label>EX05 - CustomProperties</label>
     <processMetadataValues>
         <name>BuilderType</name>
         <value>
