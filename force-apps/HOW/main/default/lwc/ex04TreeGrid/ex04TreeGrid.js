@@ -25,16 +25,6 @@ export default class Ex04TreeGrid extends NavigationMixin(LightningElement) {
 	gridColumns = GRID_COLUMNS;
 
 	@api
-	validate() {
-		// let output = { isValid: true };
-		let output = {
-			isValid: false,
-			errorMessage: "You can't go past this screen!"
-		};
-		return output;
-	}
-
-	@api
 	get familyTypes() {
 		return this.records;
 	}
@@ -57,6 +47,16 @@ export default class Ex04TreeGrid extends NavigationMixin(LightningElement) {
 				return family;
 			});
 		}
+	}
+
+	@api
+	validate() {
+		// let output = { isValid: true };
+		let output = {
+			isValid: false,
+			errorMessage: "You can't go past this screen!"
+		};
+		return output;
 	}
 
 	onRowAction(event) {

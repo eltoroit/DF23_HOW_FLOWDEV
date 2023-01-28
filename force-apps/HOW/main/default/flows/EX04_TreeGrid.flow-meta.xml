@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <actionCalls>
+        <description>Call Apex to get the Contact records for the Family__c records found (relationship queries)</description>
         <name>Apex020</name>
         <label>Apex020 Get families with contacts</label>
         <locationX>176</locationX>
@@ -8,7 +9,7 @@
         <actionName>EX04_QueryFamilies</actionName>
         <actionType>apex</actionType>
         <connector>
-            <targetReference>Screen010</targetReference>
+            <targetReference>Screen030</targetReference>
         </connector>
         <flowTransactionModel>Automatic</flowTransactionModel>
         <inputParameters>
@@ -55,6 +56,7 @@
     </processMetadataValues>
     <processType>Flow</processType>
     <recordLookups>
+        <description>SELECT * FROM Family</description>
         <name>Get010</name>
         <label>Get010</label>
         <locationX>176</locationX>
@@ -68,8 +70,9 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
     <screens>
-        <name>Screen010</name>
-        <label>Screen010</label>
+        <description>Display the data in a treeGrid using LWC</description>
+        <name>Screen030</name>
+        <label>Screen030</label>
         <locationX>176</locationX>
         <locationY>398</locationY>
         <allowBack>true</allowBack>
