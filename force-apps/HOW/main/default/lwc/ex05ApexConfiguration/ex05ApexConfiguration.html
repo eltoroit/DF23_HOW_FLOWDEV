@@ -4,7 +4,7 @@
 		<div class="slds-p-around_xx-small">
 			<lightning-combobox
 				lwc:ref="families"
-				label="families"
+				label="Families Data Provider"
 				placeholder="Choose families provider"
 				value={families.value}
 				onchange={onfamiliesChange}
@@ -18,7 +18,7 @@
 		<h2 class="slds-text-heading_medium slds-p-around_xx-small">Max Record Counts</h2>
 		<div class="slds-p-around_xx-small">
 			<lightning-slider
-				label="Families"
+				label="Max Families"
 				min={countFamilies.min}
 				max={countFamilies.max}
 				value={countFamilies.value}
@@ -28,7 +28,7 @@
 		</div>
 		<div class="slds-p-around_xx-small">
 			<lightning-slider
-				label="Contacts"
+				label="Max Contacts Per Family"
 				min={countContacts.min}
 				max={countContacts.max}
 				value={countContacts.value}

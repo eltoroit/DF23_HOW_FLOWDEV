@@ -2,54 +2,6 @@
 <FlexiPage xmlns="http://soap.sforce.com/2006/04/metadata">
     <flexiPageRegions>
         <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>required</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.Name</fieldItem>
-                <identifier>RecordNameField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>readonly</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.Family__c</fieldItem>
-                <identifier>RecordFamily_cField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.FamilyLastName__c</fieldItem>
-                <identifier>RecordFamilyLastName_cField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <name>Facet-08d198a6-ccc8-4ffa-a68f-470eb29d5e06</name>
-        <type>Facet</type>
-    </flexiPageRegions>
-    <flexiPageRegions>
-        <itemInstances>
-            <componentInstance>
-                <componentInstanceProperties>
-                    <name>body</name>
-                    <value>Facet-08d198a6-ccc8-4ffa-a68f-470eb29d5e06</value>
-                </componentInstanceProperties>
-                <componentName>flexipage:column</componentName>
-                <identifier>flexipage_column10</identifier>
-            </componentInstance>
-        </itemInstances>
-        <name>Facet-422f6f15-d9f3-41fd-aa81-f7cfac6aceed</name>
-        <type>Facet</type>
-    </flexiPageRegions>
-    <flexiPageRegions>
-        <itemInstances>
             <componentInstance>
                 <componentInstanceProperties>
                     <name>actionNames</name>
@@ -100,16 +52,8 @@
         </itemInstances>
         <itemInstances>
             <componentInstance>
-                <componentInstanceProperties>
-                    <name>columns</name>
-                    <value>Facet-422f6f15-d9f3-41fd-aa81-f7cfac6aceed</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>label</name>
-                    <value>Contact Details</value>
-                </componentInstanceProperties>
-                <componentName>flexipage:fieldSection</componentName>
-                <identifier>flexipage_fieldSection6</identifier>
+                <componentName>force:detailPanel</componentName>
+                <identifier>force_detailPanel</identifier>
             </componentInstance>
         </itemInstances>
         <mode>Replace</mode>

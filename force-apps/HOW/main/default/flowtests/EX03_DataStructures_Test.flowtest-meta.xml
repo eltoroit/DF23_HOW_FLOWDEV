@@ -8,26 +8,26 @@
             <leftValueReference>$Record</leftValueReference>
             <type>InputTriggeringRecordInitial</type>
             <value>
-                <sobjectValue>{&quot;FirstName&quot;:&quot;Andres&quot;,&quot;LastName&quot;:&quot;Perez&quot;}</sobjectValue>
+                <sobjectValue>{&quot;CleanStatus&quot;:&quot;Pending&quot;,&quot;DoNotCall&quot;:false,&quot;FirstName&quot;:&quot;Andrés&quot;,&quot;HasOptedOutOfEmail&quot;:false,&quot;HasOptedOutOfFax&quot;:false,&quot;LastName&quot;:&quot;Pérez&quot;,&quot;OwnerId&quot;:&quot;0058K000000wjw4QAA&quot;}</sobjectValue>
             </value>
         </parameters>
     </testPoints>
     <testPoints>
         <assertions>
             <conditions>
-                <leftValueReference>results.myContact.LastName</leftValueReference>
+                <leftValueReference>results.current.LastName</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <stringValue>Perez</stringValue>
+                    <stringValue>Pérez</stringValue>
                 </rightValue>
             </conditions>
         </assertions>
         <assertions>
             <conditions>
-                <leftValueReference>results.myContact.FirstName</leftValueReference>
+                <leftValueReference>results.current.FirstName</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <stringValue>Andres</stringValue>
+                    <stringValue>Andrés</stringValue>
                 </rightValue>
             </conditions>
         </assertions>

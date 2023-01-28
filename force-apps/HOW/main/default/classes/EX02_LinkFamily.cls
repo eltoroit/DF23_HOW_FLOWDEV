@@ -34,7 +34,7 @@ public without sharing class EX02_LinkFamily {
 			contact.Family__c = mapFamiliesByLastName.get(contact.LastName).Id;
 		}
 
-		// We could do the DML here, but do it in flow to explain concept
+		// We could do the DML here, but do it in flow in case something else needs to be updated
 		// update contacts;
 
 		return contacts;
