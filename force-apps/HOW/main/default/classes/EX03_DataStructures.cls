@@ -1,8 +1,8 @@
 public with sharing class EX03_DataStructures {
 	@InvocableMethod(label='Sample' description='...' category='Contact')
-	public static List<Results> execute(List<Request> requests) {
-		List<Results> responseWrapper = new List<Results>();
-		Results response = new Results();
+	public static List<Result> execute(List<Request> requests) {
+		List<Result> responseWrapper = new List<Result>();
+		Result response = new Result();
 		response.outputData = new EX03_DataStructuresAuraEnabled();
 		response.outputData.prior = requests[0].inputContacts[0];
 		response.outputData.current = requests[0].inputContacts[1];
@@ -13,11 +13,11 @@ public with sharing class EX03_DataStructures {
 	public class Request {
 		@InvocableVariable(label='Input Contacts' required='true')
 		public List<Contact> inputContacts;
-		@InvocableVariable(label='The answer to the ultimate question of life, the universe and everything is...')
+		@InvocableVariable(label='The Answer' description='The answer to the ultimate question of life, the universe and everything is...')
 		public Integer someVariable;
 	}
 
-	public class Results {
+	public class Result {
 		@InvocableVariable(label='Output Data')
 		public EX03_DataStructuresAuraEnabled outputData;
 	}

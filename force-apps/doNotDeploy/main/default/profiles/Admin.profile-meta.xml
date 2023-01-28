@@ -74,5 +74,8 @@
     <layoutAssignments>
         <layout>Contact-Family</layout>
     </layoutAssignments>
+    <layoutAssignments>
+        <layout>Family__c-Family Layout</layout>
+    </layoutAssignments>
     <userLicense>Salesforce</userLicense>
 </Profile>

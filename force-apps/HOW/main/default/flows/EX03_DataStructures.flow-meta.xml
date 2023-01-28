@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <actionCalls>
-        <name>Apex010</name>
-        <label>Apex010</label>
+        <description>Make a call to an Apex @invocableMethod to demonstrate the use of complex data</description>
+        <name>Apex020</name>
+        <label>Apex020</label>
         <locationX>176</locationX>
         <locationY>455</locationY>
         <actionName>EX03_DataStructures</actionName>
@@ -14,13 +15,20 @@
                 <elementReference>contacts</elementReference>
             </value>
         </inputParameters>
+        <inputParameters>
+            <name>someVariable</name>
+            <value>
+                <numberValue>42.0</numberValue>
+            </value>
+        </inputParameters>
         <outputParameters>
             <assignToReference>results</assignToReference>
-            <name>outputContact</name>
+            <name>outputData</name>
         </outputParameters>
     </actionCalls>
     <apiVersion>57.0</apiVersion>
     <assignments>
+        <description>Append $Record (single contact) to a list of Contact records</description>
         <name>Set010</name>
         <label>Set010</label>
         <locationX>176</locationX>
@@ -29,11 +37,18 @@
             <assignToReference>contacts</assignToReference>
             <operator>Add</operator>
             <value>
+                <elementReference>$Record__Prior</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>contacts</assignToReference>
+            <operator>Add</operator>
+            <value>
                 <elementReference>$Record</elementReference>
             </value>
         </assignmentItems>
         <connector>
-            <targetReference>Apex010</targetReference>
+            <targetReference>Apex020</targetReference>
         </connector>
     </assignments>
     <environments>Default</environments>
