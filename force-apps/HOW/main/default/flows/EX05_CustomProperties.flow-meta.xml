@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <actionCalls>
-        <description>Calls Apex to get related records, and returns the maximum number of records desired</description>
-        <name>Apex010</name>
-        <label>Apex010 Get families with contacts</label>
-        <locationX>176</locationX>
-        <locationY>278</locationY>
+        <description>Call Apex to get the Contact records for the Family__c records found (relationship queries)</description>
+        <name>Apex020</name>
+        <label>Apex020 (Old) Get families with contacts</label>
+        <locationX>314</locationX>
+        <locationY>398</locationY>
         <actionName>EX04_QueryFamilies</actionName>
         <actionType>apex</actionType>
         <connector>
-            <targetReference>Screen010</targetReference>
+            <targetReference>Screen030</targetReference>
         </connector>
         <flowTransactionModel>Automatic</flowTransactionModel>
         <inputParameters>
             <name>countFamilies</name>
             <value>
-                <numberValue>150.0</numberValue>
+                <numberValue>100.0</numberValue>
             </value>
         </inputParameters>
         <inputParameters>
@@ -27,15 +27,79 @@
         <inputParameters>
             <name>countContacts</name>
             <value>
-                <numberValue>10.0</numberValue>
+                <numberValue>100.0</numberValue>
+            </value>
+        </inputParameters>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </actionCalls>
+    <actionCalls>
+        <description>Call Apex to get the Contact records for the Family__c records found (relationship queries)</description>
+        <name>Apex020New</name>
+        <label>Apex020 (New) Get families with contacts</label>
+        <locationX>50</locationX>
+        <locationY>398</locationY>
+        <actionName>EX05_QueryFamilies</actionName>
+        <actionType>apex</actionType>
+        <connector>
+            <targetReference>Screen030New</targetReference>
+        </connector>
+        <flowTransactionModel>Automatic</flowTransactionModel>
+        <inputParameters>
+            <name>countFamilies</name>
+            <value>
+                <numberValue>100.0</numberValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>families</name>
+            <value>
+                <elementReference>Get010</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>countContacts</name>
+            <value>
+                <numberValue>100.0</numberValue>
             </value>
         </inputParameters>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </actionCalls>
     <apiVersion>56.0</apiVersion>
+    <constants>
+        <name>PATH</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>NEW</stringValue>
+        </value>
+    </constants>
+    <decisions>
+        <name>IF015</name>
+        <label>IF015 Which version?</label>
+        <locationX>182</locationX>
+        <locationY>278</locationY>
+        <defaultConnector>
+            <targetReference>Apex020</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Old</defaultConnectorLabel>
+        <rules>
+            <name>If015New</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>PATH</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>New</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Apex020New</targetReference>
+            </connector>
+            <label>New</label>
+        </rules>
+    </decisions>
     <environments>Default</environments>
-    <interviewLabel>View030 {!$Flow.CurrentDateTime}</interviewLabel>
-    <label>EX05 - CustomProperties</label>
+    <interviewLabel>View010 {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>EX05 - Custom Properties</label>
     <processMetadataValues>
         <name>BuilderType</name>
         <value>
@@ -56,35 +120,62 @@
     </processMetadataValues>
     <processType>Flow</processType>
     <recordLookups>
-        <description>Queries all the family records</description>
+        <description>SELECT * FROM Family</description>
         <name>Get010</name>
-        <label>Get010 Find families</label>
-        <locationX>176</locationX>
+        <label>Get010</label>
+        <locationX>182</locationX>
         <locationY>158</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
-            <targetReference>Apex010</targetReference>
+            <targetReference>IF015</targetReference>
         </connector>
         <getFirstRecordOnly>false</getFirstRecordOnly>
         <object>Family__c</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
     <screens>
-        <name>Screen010</name>
-        <label>Screen010</label>
-        <locationX>176</locationX>
-        <locationY>398</locationY>
+        <description>Display the data in a treeGrid using LWC</description>
+        <name>Screen030</name>
+        <label>Screen030 (Old)</label>
+        <locationX>314</locationX>
+        <locationY>518</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
         <fields>
-            <name>LWC010</name>
+            <name>TreeGrid</name>
             <extensionName>c:ex04TreeGrid</extensionName>
             <fieldType>ComponentInstance</fieldType>
             <inputParameters>
                 <name>familyTypes</name>
                 <value>
-                    <elementReference>Apex010.response</elementReference>
+                    <elementReference>Apex020.response</elementReference>
+                </value>
+            </inputParameters>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>true</isRequired>
+            <storeOutputAutomatically>true</storeOutputAutomatically>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <description>Display the data in a treeGrid using LWC</description>
+        <name>Screen030New</name>
+        <label>Screen030 (New)</label>
+        <locationX>50</locationX>
+        <locationY>518</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>TreeGridNew</name>
+            <extensionName>c:ex05TreeGrid</extensionName>
+            <fieldType>ComponentInstance</fieldType>
+            <inputParameters>
+                <name>familyTypes</name>
+                <value>
+                    <elementReference>Apex020New.response</elementReference>
                 </value>
             </inputParameters>
             <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
@@ -95,19 +186,11 @@
         <showHeader>true</showHeader>
     </screens>
     <start>
-        <locationX>50</locationX>
+        <locationX>56</locationX>
         <locationY>0</locationY>
         <connector>
             <targetReference>Get010</targetReference>
         </connector>
     </start>
     <status>Draft</status>
-    <variables>
-        <name>familyTypes</name>
-        <apexClass>EX04_FamilyTypeAuraEnabled</apexClass>
-        <dataType>Apex</dataType>
-        <isCollection>true</isCollection>
-        <isInput>false</isInput>
-        <isOutput>false</isOutput>
-    </variables>
 </Flow>
