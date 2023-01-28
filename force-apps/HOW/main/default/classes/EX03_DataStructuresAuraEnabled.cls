@@ -1,4 +1,6 @@
 public class EX03_DataStructuresAuraEnabled {
 	@AuraEnabled
-	public Contact myContact { get; set; }
+	public Contact prior { get; set; }
+	@AuraEnabled
+	public Contact current { get; set; }
 }
