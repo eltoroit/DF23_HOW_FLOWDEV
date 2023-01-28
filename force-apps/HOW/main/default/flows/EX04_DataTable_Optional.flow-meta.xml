@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <actionCalls>
-        <name>Apex010</name>
-        <label>Apex010 Get families with contacts</label>
+        <name>Apex020</name>
+        <label>Apex020 Get families with contacts</label>
         <locationX>176</locationX>
         <locationY>278</locationY>
         <actionName>EX04_QueryFamilies</actionName>
         <actionType>apex</actionType>
         <connector>
-            <targetReference>Screen010</targetReference>
+            <targetReference>Screen030</targetReference>
         </connector>
         <flowTransactionModel>Automatic</flowTransactionModel>
         <inputParameters>
@@ -34,16 +34,16 @@
     <apiVersion>56.0</apiVersion>
     <environments>Default</environments>
     <interviewLabel>View020 {!$Flow.CurrentDateTime}</interviewLabel>
-    <label>EX04 - DataTable</label>
+    <label>EX04 - DataTable (Optional)</label>
     <loops>
-        <name>Loop010</name>
-        <label>Loop010 For each FamilyType</label>
+        <name>Loop040</name>
+        <label>Loop040 For each FamilyType</label>
         <locationX>176</locationX>
         <locationY>518</locationY>
-        <collectionReference>Apex010.response.records</collectionReference>
+        <collectionReference>Apex020.response.records</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
-            <targetReference>Screen020</targetReference>
+            <targetReference>Screen050</targetReference>
         </nextValueConnector>
     </loops>
     <processMetadataValues>
@@ -72,27 +72,27 @@
         <locationY>158</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
-            <targetReference>Apex010</targetReference>
+            <targetReference>Apex020</targetReference>
         </connector>
         <getFirstRecordOnly>false</getFirstRecordOnly>
         <object>Family__c</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
     <screens>
-        <name>Screen010</name>
-        <label>Screen010 Debug data received</label>
+        <name>Screen030</name>
+        <label>Screen030 Debug data received</label>
         <locationX>176</locationX>
         <locationY>398</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
         <connector>
-            <targetReference>Loop010</targetReference>
+            <targetReference>Loop040</targetReference>
         </connector>
         <fields>
             <name>DebugShowData</name>
             <defaultValue>
-                <stringValue>{!Apex010.response.records}</stringValue>
+                <stringValue>{!Apex020.response.records}</stringValue>
             </defaultValue>
             <fieldText>DebugShowData</fieldText>
             <fieldType>LargeTextArea</fieldType>
@@ -102,19 +102,19 @@
         <showHeader>true</showHeader>
     </screens>
     <screens>
-        <name>Screen020</name>
-        <label>Screen020 Show each family</label>
+        <name>Screen050</name>
+        <label>Screen050 Show each family</label>
         <locationX>264</locationX>
         <locationY>638</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
         <connector>
-            <targetReference>Loop010</targetReference>
+            <targetReference>Loop040</targetReference>
         </connector>
         <fields>
             <name>Header</name>
-            <fieldText>&lt;p&gt;LastName: &lt;strong&gt;{!Loop010.record.LastName__c}&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Contacts: &lt;strong&gt;{!Loop010.contactsCount}&lt;/strong&gt;&lt;/p&gt;</fieldText>
+            <fieldText>&lt;p&gt;LastName: &lt;strong&gt;{!Loop040.record.LastName__c}&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Contacts: &lt;strong&gt;{!Loop040.contactsCount}&lt;/strong&gt;&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
@@ -146,7 +146,7 @@
             <inputParameters>
                 <name>tableData</name>
                 <value>
-                    <elementReference>Loop010.contacts</elementReference>
+                    <elementReference>Loop040.contacts</elementReference>
                 </value>
             </inputParameters>
             <inputParameters>

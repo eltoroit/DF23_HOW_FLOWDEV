@@ -53,7 +53,7 @@
     </assignments>
     <environments>Default</environments>
     <interviewLabel>EX03_DataStructures {!$Flow.CurrentDateTime}</interviewLabel>
-    <label>EX03_DataStructures</label>
+    <label>EX03 - DataStructures</label>
     <processMetadataValues>
         <name>BuilderType</name>
         <value>

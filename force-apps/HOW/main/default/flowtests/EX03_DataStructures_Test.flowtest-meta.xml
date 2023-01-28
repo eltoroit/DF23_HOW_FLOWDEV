@@ -15,7 +15,7 @@
     <testPoints>
         <assertions>
             <conditions>
-                <leftValueReference>results.myContact.LastName</leftValueReference>
+                <leftValueReference>results.current.LastName</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <stringValue>Perez</stringValue>
@@ -24,7 +24,7 @@
         </assertions>
         <assertions>
             <conditions>
-                <leftValueReference>results.myContact.FirstName</leftValueReference>
+                <leftValueReference>results.current.FirstName</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <stringValue>Andres</stringValue>

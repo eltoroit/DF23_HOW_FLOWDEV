@@ -1,5 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Apex020</name>
+        <label>Apex020 Get families with contacts</label>
+        <locationX>176</locationX>
+        <locationY>278</locationY>
+        <actionName>EX04_QueryFamilies</actionName>
+        <actionType>apex</actionType>
+        <connector>
+            <targetReference>Screen010</targetReference>
+        </connector>
+        <flowTransactionModel>Automatic</flowTransactionModel>
+        <inputParameters>
+            <name>countFamilies</name>
+            <value>
+                <numberValue>100.0</numberValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>families</name>
+            <value>
+                <elementReference>Get010</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>countContacts</name>
+            <value>
+                <numberValue>100.0</numberValue>
+            </value>
+        </inputParameters>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </actionCalls>
     <apiVersion>56.0</apiVersion>
     <environments>Default</environments>
     <interviewLabel>View010 {!$Flow.CurrentDateTime}</interviewLabel>
@@ -30,82 +61,33 @@
         <locationY>158</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
-            <targetReference>Screen010</targetReference>
+            <targetReference>Apex020</targetReference>
         </connector>
-        <filterLogic>and</filterLogic>
-        <filters>
-            <field>Family__c</field>
-            <operator>IsNull</operator>
-            <value>
-                <booleanValue>false</booleanValue>
-            </value>
-        </filters>
         <getFirstRecordOnly>false</getFirstRecordOnly>
-        <object>Contact</object>
-        <sortField>LastName</sortField>
-        <sortOrder>Asc</sortOrder>
+        <object>Family__c</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
     <screens>
         <name>Screen010</name>
         <label>Screen010</label>
         <locationX>176</locationX>
-        <locationY>278</locationY>
+        <locationY>398</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
         <fields>
-            <name>Table010</name>
-            <dataTypeMappings>
-                <typeName>T</typeName>
-                <typeValue>Contact</typeValue>
-            </dataTypeMappings>
-            <extensionName>flowruntime:datatable</extensionName>
+            <name>TreeGrid</name>
+            <extensionName>c:ex04TreeGrid</extensionName>
             <fieldType>ComponentInstance</fieldType>
             <inputParameters>
-                <name>label</name>
+                <name>familyTypes</name>
                 <value>
-                    <stringValue>Data Table</stringValue>
-                </value>
-            </inputParameters>
-            <inputParameters>
-                <name>selectionMode</name>
-                <value>
-                    <stringValue>NO_SELECTION</stringValue>
-                </value>
-            </inputParameters>
-            <inputParameters>
-                <name>minRowSelection</name>
-                <value>
-                    <numberValue>0.0</numberValue>
-                </value>
-            </inputParameters>
-            <inputParameters>
-                <name>shouldDisplayLabel</name>
-                <value>
-                    <booleanValue>true</booleanValue>
-                </value>
-            </inputParameters>
-            <inputParameters>
-                <name>tableData</name>
-                <value>
-                    <elementReference>Get010</elementReference>
-                </value>
-            </inputParameters>
-            <inputParameters>
-                <name>maxRowSelection</name>
-                <value>
-                    <numberValue>0.0</numberValue>
-                </value>
-            </inputParameters>
-            <inputParameters>
-                <name>columns</name>
-                <value>
-                    <stringValue>[{&quot;apiName&quot;:&quot;FirstName&quot;,&quot;guid&quot;:&quot;column-47b1&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:0,&quot;label&quot;:&quot;First Name&quot;,&quot;type&quot;:&quot;text&quot;},{&quot;apiName&quot;:&quot;LastName&quot;,&quot;guid&quot;:&quot;column-e018&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:1,&quot;label&quot;:&quot;Last Name&quot;,&quot;type&quot;:&quot;text&quot;},{&quot;apiName&quot;:&quot;Family__c&quot;,&quot;guid&quot;:&quot;column-7889&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:2,&quot;label&quot;:&quot;Family&quot;,&quot;type&quot;:&quot;customRichText&quot;},{&quot;apiName&quot;:&quot;FamilyLastName__c&quot;,&quot;guid&quot;:&quot;column-82bb&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:3,&quot;label&quot;:&quot;Family&apos;s Last Name&quot;,&quot;type&quot;:&quot;customRichText&quot;}]</stringValue>
+                    <elementReference>Apex020.response</elementReference>
                 </value>
             </inputParameters>
             <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
             <isRequired>true</isRequired>
+            <storeOutputAutomatically>true</storeOutputAutomatically>
         </fields>
         <showFooter>true</showFooter>
         <showHeader>true</showHeader>
@@ -117,5 +99,5 @@
             <targetReference>Get010</targetReference>
         </connector>
     </start>
-    <status>Draft</status>
+    <status>Active</status>
 </Flow>
