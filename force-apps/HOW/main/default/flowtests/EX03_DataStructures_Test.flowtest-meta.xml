@@ -8,7 +8,7 @@
             <leftValueReference>$Record</leftValueReference>
             <type>InputTriggeringRecordInitial</type>
             <value>
-                <sobjectValue>{&quot;CleanStatus&quot;:&quot;Pending&quot;,&quot;DoNotCall&quot;:false,&quot;FirstName&quot;:&quot;Andrés&quot;,&quot;HasOptedOutOfEmail&quot;:false,&quot;HasOptedOutOfFax&quot;:false,&quot;LastName&quot;:&quot;Pérez&quot;,&quot;OwnerId&quot;:&quot;0058K000000wjw4QAA&quot;}</sobjectValue>
+                <sobjectValue>{&quot;FirstName&quot;:&quot;Andrés&quot;,&quot;LastName&quot;:&quot;Pérez&quot;}</sobjectValue>
             </value>
         </parameters>
     </testPoints>
