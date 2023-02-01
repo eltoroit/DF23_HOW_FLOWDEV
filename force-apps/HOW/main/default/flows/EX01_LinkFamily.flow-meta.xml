@@ -10,9 +10,9 @@
         <defaultConnector>
             <targetReference>Insert030</targetReference>
         </defaultConnector>
-        <defaultConnectorLabel>NO</defaultConnectorLabel>
+        <defaultConnectorLabel>Family must be created</defaultConnectorLabel>
         <rules>
-            <name>IF010_YES</name>
+            <name>IF010_FamilyFound</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
                 <leftValueReference>Get010</leftValueReference>
@@ -24,7 +24,7 @@
             <connector>
                 <targetReference>Update040</targetReference>
             </connector>
-            <label>Yes</label>
+            <label>Family found</label>
         </rules>
     </decisions>
     <environments>Default</environments>
