@@ -64,7 +64,7 @@
         </inputParameters>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </actionCalls>
-    <apiVersion>56.0</apiVersion>
+    <apiVersion>57.0</apiVersion>
     <constants>
         <name>PATH</name>
         <dataType>String</dataType>
