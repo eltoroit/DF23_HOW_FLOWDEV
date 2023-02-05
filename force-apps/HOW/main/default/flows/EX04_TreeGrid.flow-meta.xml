@@ -32,7 +32,7 @@
         </inputParameters>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </actionCalls>
-    <apiVersion>56.0</apiVersion>
+    <apiVersion>57.0</apiVersion>
     <environments>Default</environments>
     <interviewLabel>View010 {!$Flow.CurrentDateTime}</interviewLabel>
     <label>EX04 - TreeGrid</label>
