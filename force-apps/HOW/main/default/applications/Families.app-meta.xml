@@ -56,8 +56,7 @@
     <label>Families</label>
     <navType>Standard</navType>
     <tabs>standard-home</tabs>
-    <tabs>standard-CmsAuthorHome</tabs>
-    <tabs>standard-MobileHome</tabs>
+    <tabs>standard-File</tabs>
     <tabs>standard-Account</tabs>
     <tabs>standard-Contact</tabs>
     <tabs>Family__c</tabs>
