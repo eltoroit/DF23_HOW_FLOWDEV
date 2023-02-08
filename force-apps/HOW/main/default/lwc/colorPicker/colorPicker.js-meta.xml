@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>57.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>Color Picker</masterLabel>
+    <description>Flows + LWC</description>
+    <targets>
+        <target>lightning__FlowScreen</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__FlowScreen">
+            <property name="red" label="Red (0-255)" type="String" />
+            <property name="green" label="Green (0-255)" type="String" />
+            <property name="blue" label="Blue (0-255)" type="String" />
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>
