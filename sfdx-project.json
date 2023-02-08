@@ -1,16 +1,20 @@
 {
-  "packageDirectories": [
+	"packageDirectories": [
 		{
 			"path": "force-apps/HOW",
 			"default": true
 		},
 		{
+			"path": "force-apps/otherDemos",
+			"default": false
+		},
+		{
 			"path": "force-apps/doNotDeploy",
 			"default": false
 		}
-  ],
-  "name": "v2",
-  "namespace": "",
-  "sfdcLoginUrl": "https://login.salesforce.com",
-  "sourceApiVersion": "56.0"
+	],
+	"name": "v2",
+	"namespace": "",
+	"sfdcLoginUrl": "https://login.salesforce.com",
+	"sourceApiVersion": "56.0"
 }
