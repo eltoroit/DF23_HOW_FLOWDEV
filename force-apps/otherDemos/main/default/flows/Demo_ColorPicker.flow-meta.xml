@@ -24,68 +24,178 @@
     </processMetadataValues>
     <processType>Flow</processType>
     <screens>
-        <name>S1</name>
-        <label>S1</label>
+        <name>Color_Picker</name>
+        <label>Color Picker</label>
         <locationX>176</locationX>
         <locationY>158</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
         <fields>
-            <name>RED</name>
-            <dataType>String</dataType>
-            <defaultValue>
-                <elementReference>Color.red</elementReference>
-            </defaultValue>
-            <fieldText>RED</fieldText>
-            <fieldType>InputField</fieldType>
+            <name>FlowComponents</name>
+            <fieldText>Flow Components</fieldText>
+            <fieldType>RegionContainer</fieldType>
+            <fields>
+                <name>FlowComponents_Column1</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>RED</name>
+                    <dataType>Number</dataType>
+                    <defaultValue>
+                        <elementReference>LWC_Color.red</elementReference>
+                    </defaultValue>
+                    <fieldText>RED</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <isRequired>false</isRequired>
+                    <scale>0</scale>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>4</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <fields>
+                <name>FlowComponents_Column2</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>GREEN</name>
+                    <dataType>Number</dataType>
+                    <defaultValue>
+                        <elementReference>LWC_Color.green</elementReference>
+                    </defaultValue>
+                    <fieldText>GREEN</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <isRequired>false</isRequired>
+                    <scale>0</scale>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>4</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <fields>
+                <name>FlowComponents_Column3</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>BLUE</name>
+                    <dataType>Number</dataType>
+                    <defaultValue>
+                        <elementReference>LWC_Color.blue</elementReference>
+                    </defaultValue>
+                    <fieldText>BLUE</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <isRequired>false</isRequired>
+                    <scale>0</scale>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>4</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
             <isRequired>false</isRequired>
+            <regionContainerType>SectionWithHeader</regionContainerType>
         </fields>
         <fields>
-            <name>GREEN</name>
-            <dataType>String</dataType>
-            <defaultValue>
-                <elementReference>Color.green</elementReference>
-            </defaultValue>
-            <fieldText>GREEN</fieldText>
-            <fieldType>InputField</fieldType>
+            <name>Custom_LWC_Components</name>
+            <fieldText>Custom LWC Components</fieldText>
+            <fieldType>RegionContainer</fieldType>
+            <fields>
+                <name>Custom_LWC_Components_Column1</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>LWC_Color</name>
+                    <extensionName>c:colorPicker</extensionName>
+                    <fieldType>ComponentInstance</fieldType>
+                    <inputParameters>
+                        <name>blue</name>
+                        <value>
+                            <elementReference>BLUE</elementReference>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>green</name>
+                        <value>
+                            <elementReference>GREEN</elementReference>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>red</name>
+                        <value>
+                            <elementReference>RED</elementReference>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>label</name>
+                        <value>
+                            <stringValue>Change this...</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                    <storeOutputAutomatically>true</storeOutputAutomatically>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>9</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <fields>
+                <name>Custom_LWC_Components_Column2</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>LWC_Color2</name>
+                    <extensionName>c:colorPicker</extensionName>
+                    <fieldType>ComponentInstance</fieldType>
+                    <inputParameters>
+                        <name>blue</name>
+                        <value>
+                            <elementReference>LWC_Color.blue</elementReference>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>green</name>
+                        <value>
+                            <elementReference>LWC_Color.green</elementReference>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>red</name>
+                        <value>
+                            <elementReference>LWC_Color.red</elementReference>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>label</name>
+                        <value>
+                            <stringValue>Color was changed here too!</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                    <storeOutputAutomatically>true</storeOutputAutomatically>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>3</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
             <isRequired>false</isRequired>
-        </fields>
-        <fields>
-            <name>BLUE</name>
-            <dataType>String</dataType>
-            <defaultValue>
-                <elementReference>Color.blue</elementReference>
-            </defaultValue>
-            <fieldText>BLUE</fieldText>
-            <fieldType>InputField</fieldType>
-            <isRequired>false</isRequired>
-        </fields>
-        <fields>
-            <name>Color</name>
-            <extensionName>c:colorPicker</extensionName>
-            <fieldType>ComponentInstance</fieldType>
-            <inputParameters>
-                <name>blue</name>
-                <value>
-                    <elementReference>BLUE</elementReference>
-                </value>
-            </inputParameters>
-            <inputParameters>
-                <name>green</name>
-                <value>
-                    <elementReference>GREEN</elementReference>
-                </value>
-            </inputParameters>
-            <inputParameters>
-                <name>red</name>
-                <value>
-                    <elementReference>RED</elementReference>
-                </value>
-            </inputParameters>
-            <inputsOnNextNavToAssocScrn>ResetValues</inputsOnNextNavToAssocScrn>
-            <isRequired>true</isRequired>
-            <storeOutputAutomatically>true</storeOutputAutomatically>
+            <regionContainerType>SectionWithHeader</regionContainerType>
         </fields>
         <showFooter>true</showFooter>
         <showHeader>true</showHeader>
@@ -94,7 +204,7 @@
         <locationX>50</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>S1</targetReference>
+            <targetReference>Color_Picker</targetReference>
         </connector>
     </start>
     <status>Draft</status>
