@@ -14,6 +14,8 @@ export default class ColorPicker extends LightningElement {
 		}, 0);
 	}
 
+	@api label;
+
 	@api
 	get red() {
 		return this._red;

@@ -9,9 +9,10 @@
     </targets>
     <targetConfigs>
         <targetConfig targets="lightning__FlowScreen">
-            <property name="red" label="Red (0-255)" type="String" />
-            <property name="green" label="Green (0-255)" type="String" />
-            <property name="blue" label="Blue (0-255)" type="String" />
+            <property name="label" label="Label" type="String" />
+            <property name="blue" label="Blue (0-255)" type="Integer" required="true" />
+            <property name="green" label="Green (0-255)" type="Integer" />
+            <property name="red" label="Red (0-255)" type="Integer" />
         </targetConfig>
     </targetConfigs>
 </LightningComponentBundle>
