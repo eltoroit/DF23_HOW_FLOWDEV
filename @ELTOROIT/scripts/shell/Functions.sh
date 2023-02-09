@@ -129,7 +129,7 @@ function jq_sfdxGeneratePassword() {
 	et_sfdx force:user:password:generate --json
 }
 function jq_sfdxDisplayUser() {
-	et_sfdx force:user:display --json
+	et_sfdx org:display:user --json
 }
 function jq_sfdxRunApexTests() {
 	showCommand "sfdx $*"
@@ -311,7 +311,7 @@ function mainAssignPermissionSet() {
 	then
 		showStatus "*** Assigning permission set(s) to your user... ($0 ${FUNCNAME[0]})"
 		for PERM_SET in ${PERM_SETS[@]}; do
-			et_sfdx force:user:permset:assign --permsetname "$PERM_SET" --json
+			et_sfdx force:user:permset:assign --perm-set-name "$PERM_SET" --json
 		done
 		showComplete
 	fi
