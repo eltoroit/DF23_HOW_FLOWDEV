@@ -1,6 +1,6 @@
-public class EX04_FamilyTypeAuraEnabled {
+public class EX03AE_FamilyWithContacts {
 	@AuraEnabled
-	public Family__c record { get; set; }
+	public Family__c family { get; set; }
 
 	@AuraEnabled
 	public List<Contact> contacts { get; set; }

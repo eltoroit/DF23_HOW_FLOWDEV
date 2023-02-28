@@ -1,23 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <actionCalls>
-        <description>Call Apex to get the Contact records for the Family__c records found (relationship queries)</description>
+        <description>Call Apex to get the Contact records for the Family__c records found
+            (relationship queries)</description>
         <name>Apex020</name>
         <label>Apex020 Get families with contacts</label>
         <locationX>176</locationX>
         <locationY>278</locationY>
-        <actionName>EX04_QueryFamilies</actionName>
+        <actionName>EX03_QueryFamilies</actionName>
         <actionType>apex</actionType>
         <connector>
             <targetReference>Screen030</targetReference>
         </connector>
         <flowTransactionModel>Automatic</flowTransactionModel>
-        <inputParameters>
-            <name>countFamilies</name>
-            <value>
-                <numberValue>100.0</numberValue>
-            </value>
-        </inputParameters>
         <inputParameters>
             <name>families</name>
             <value>
@@ -25,9 +20,9 @@
             </value>
         </inputParameters>
         <inputParameters>
-            <name>countContacts</name>
+            <name>maxFamilies</name>
             <value>
-                <numberValue>100.0</numberValue>
+                <numberValue>50.0</numberValue>
             </value>
         </inputParameters>
         <storeOutputAutomatically>true</storeOutputAutomatically>
