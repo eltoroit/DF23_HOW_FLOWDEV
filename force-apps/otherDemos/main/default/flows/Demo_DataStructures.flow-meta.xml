@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <actionCalls>
-        <description>Make a call to an Apex @invocableMethod to demonstrate the use of complex data</description>
+        <description>Makes a call to an Apex @invocableMethod to demonstrate the use of complex data</description>
         <name>Apex020</name>
         <label>Apex020</label>
         <locationX>176</locationX>
         <locationY>455</locationY>
-        <actionName>EX03_DataStructures</actionName>
+        <actionName>Demo_DataStructures</actionName>
         <actionType>apex</actionType>
         <flowTransactionModel>CurrentTransaction</flowTransactionModel>
         <inputParameters>
@@ -52,8 +52,8 @@
         </connector>
     </assignments>
     <environments>Default</environments>
-    <interviewLabel>EX03_DataStructures {!$Flow.CurrentDateTime}</interviewLabel>
-    <label>EX03 - DataStructures</label>
+    <interviewLabel>Demo_DataStructures {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Demo: DataStructures</label>
     <processMetadataValues>
         <name>BuilderType</name>
         <value>
@@ -94,7 +94,7 @@
     </variables>
     <variables>
         <name>results</name>
-        <apexClass>EX03_DataStructuresAuraEnabled</apexClass>
+        <apexClass>Demo_DataStructuresAuraEnabled</apexClass>
         <dataType>Apex</dataType>
         <isCollection>false</isCollection>
         <isInput>false</isInput>

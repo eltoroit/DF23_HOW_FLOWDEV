@@ -1,9 +1,9 @@
-public with sharing class EX03_DataStructures {
+public with sharing class Demo_DataStructures {
 	@InvocableMethod(label='Sample' description='...' category='Contact')
 	public static List<Result> execute(List<Request> requests) {
 		List<Result> responseWrapper = new List<Result>();
 		Result response = new Result();
-		response.outputData = new EX03_DataStructuresAuraEnabled();
+		response.outputData = new Demo_DataStructuresAuraEnabled();
 		response.outputData.prior = requests[0].inputContacts[0];
 		response.outputData.current = requests[0].inputContacts[1];
 		responseWrapper.add(response);
@@ -19,6 +19,6 @@ public with sharing class EX03_DataStructures {
 
 	public class Result {
 		@InvocableVariable(label='Output Data')
-		public EX03_DataStructuresAuraEnabled outputData;
+		public Demo_DataStructuresAuraEnabled outputData;
 	}
 }

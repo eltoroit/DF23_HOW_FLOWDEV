@@ -34,7 +34,7 @@
     <apiVersion>57.0</apiVersion>
     <environments>Default</environments>
     <interviewLabel>View020 {!$Flow.CurrentDateTime}</interviewLabel>
-    <label>EX04 - DataTable (Optional)</label>
+    <label>Demo: DataTable</label>
     <loops>
         <name>Loop040</name>
         <label>Loop040 For each FamilyType</label>
@@ -114,7 +114,9 @@
         </connector>
         <fields>
             <name>Header</name>
-            <fieldText>&lt;p&gt;LastName: &lt;strong&gt;{!Loop040.record.LastName__c}&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Contacts: &lt;strong&gt;{!Loop040.contactsCount}&lt;/strong&gt;&lt;/p&gt;</fieldText>
+            <fieldText>&lt;p&gt;LastName:
+                &lt;strong&gt;{!Loop040.record.LastName__c}&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Contacts:
+                &lt;strong&gt;{!Loop040.contactsCount}&lt;/strong&gt;&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
@@ -158,7 +160,12 @@
             <inputParameters>
                 <name>columns</name>
                 <value>
-                    <stringValue>[{&quot;apiName&quot;:&quot;FirstName&quot;,&quot;guid&quot;:&quot;column-e199&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:0,&quot;label&quot;:&quot;First Name&quot;,&quot;type&quot;:&quot;text&quot;},{&quot;apiName&quot;:&quot;LastName&quot;,&quot;guid&quot;:&quot;column-a608&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:1,&quot;label&quot;:&quot;Last Name&quot;,&quot;type&quot;:&quot;text&quot;},{&quot;apiName&quot;:&quot;Family__c&quot;,&quot;guid&quot;:&quot;column-dce3&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:2,&quot;label&quot;:&quot;Family&quot;,&quot;type&quot;:&quot;customRichText&quot;},{&quot;apiName&quot;:&quot;FamilyLastName__c&quot;,&quot;guid&quot;:&quot;column-f37b&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:true,&quot;customHeaderLabel&quot;:&quot;Last name (lookup)&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:3,&quot;label&quot;:&quot;Family&apos;s Last Name&quot;,&quot;type&quot;:&quot;customRichText&quot;}]</stringValue>
+                    <stringValue>[{&quot;apiName&quot;:&quot;FirstName&quot;,&quot;guid&quot;:&quot;column-e199&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:0,&quot;label&quot;:&quot;First
+                        Name&quot;,&quot;type&quot;:&quot;text&quot;},{&quot;apiName&quot;:&quot;LastName&quot;,&quot;guid&quot;:&quot;column-a608&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:1,&quot;label&quot;:&quot;Last
+                        Name&quot;,&quot;type&quot;:&quot;text&quot;},{&quot;apiName&quot;:&quot;Family__c&quot;,&quot;guid&quot;:&quot;column-dce3&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:2,&quot;label&quot;:&quot;Family&quot;,&quot;type&quot;:&quot;customRichText&quot;},{&quot;apiName&quot;:&quot;FamilyLastName__c&quot;,&quot;guid&quot;:&quot;column-f37b&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:true,&quot;customHeaderLabel&quot;:&quot;Last
+                        name
+                        (lookup)&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:3,&quot;label&quot;:&quot;Family&apos;s
+                        Last Name&quot;,&quot;type&quot;:&quot;customRichText&quot;}]</stringValue>
                 </value>
             </inputParameters>
             <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
