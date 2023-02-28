@@ -2,15 +2,11 @@ public class EX03AE_Response {
 	@AuraEnabled
 	public List<EX03AE_FamilyWithContacts> familiesWithContacts { get; set; }
 	@AuraEnabled
-	public integer theAnswer {
-		get {
-			return 42;
-		}
-		private set;
-	}
+	public Integer theAnswer { get; set; }
 
 	public EX03AE_Response() {
-		this.familiesWithContacts = new List<EX03AE_FamilyWithContacts>();
+		theAnswer = 42;
+		familiesWithContacts = new List<EX03AE_FamilyWithContacts>();
 	}
 
 	public void add(Family__c family) {
