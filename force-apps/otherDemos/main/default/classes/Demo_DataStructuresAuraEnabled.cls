@@ -1,4 +1,4 @@
-public class EX03_DataStructuresAuraEnabled {
+public class Demo_DataStructuresAuraEnabled {
 	@AuraEnabled
 	public Contact prior { get; set; }
 	@AuraEnabled

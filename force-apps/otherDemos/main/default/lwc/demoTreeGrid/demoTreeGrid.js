@@ -19,7 +19,7 @@ const GRID_COLUMNS = [
 	}
 ];
 
-export default class Ex04TreeGrid extends NavigationMixin(LightningElement) {
+export default class DemoTreeGrid extends NavigationMixin(LightningElement) {
 	records;
 	gridData = [];
 	gridColumns = GRID_COLUMNS;
@@ -29,15 +29,15 @@ export default class Ex04TreeGrid extends NavigationMixin(LightningElement) {
 		return this.records;
 	}
 	set familyTypes(value) {
-		if (value.records) {
-			this.records = value.records;
-			this.gridData = this.records.map((familyType) => {
+		if (value.familiesWithContacts) {
+			this.records = value.familiesWithContacts;
+			this.gridData = this.records.map((familyWithContacts) => {
 				const family = {
-					Id: familyType.record.Id,
-					LastName: `${familyType.record.LastName__c} (${familyType.contacts.length} members)`,
+					Id: familyWithContacts.family.Id,
+					LastName: `${familyWithContacts.family.LastName__c} (${familyWithContacts.contactsCount} members)`,
 					_children: []
 				};
-				familyType.contacts.forEach((contact) => {
+				familyWithContacts.contacts.forEach((contact) => {
 					family._children.push({
 						Id: contact.Id,
 						FirstName: contact.FirstName,

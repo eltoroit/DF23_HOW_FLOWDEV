@@ -1,6 +1,6 @@
 import { api, LightningElement, track } from "lwc";
 
-export default class Ex05ApexConfiguration extends LightningElement {
+export default class DemoApexConfiguration extends LightningElement {
 	_inputVariables;
 	_builderContext;
 
@@ -8,15 +8,10 @@ export default class Ex05ApexConfiguration extends LightningElement {
 		value: null,
 		options: []
 	};
-	@track countFamilies = {
+	@track maxFamilies = {
 		min: 1,
 		max: 200,
 		value: 100
-	};
-	@track countContacts = {
-		min: 1,
-		max: 20,
-		value: 15
 	};
 
 	@api
@@ -27,8 +22,11 @@ export default class Ex05ApexConfiguration extends LightningElement {
 		if (value) {
 			this._inputVariables = value;
 			console.log(this._inputVariables);
-			this.countFamilies.value = this.inputVariables.find(({ name }) => name === "countFamilies")?.value;
-			this.countContacts.value = this.inputVariables.find(({ name }) => name === "countContacts")?.value;
+			this.maxFamilies.value = this.inputVariables.find(({ name }) => name === "maxFamilies")?.value;
+			if (!(this.maxFamilies.value > 0)) {
+				this.maxFamilies.value = 1;
+				this.handleChange(this.maxFamilies.value, "maxFamilies", "Number");
+			}
 			let families = this.inputVariables.find(({ name }) => name === "families")?.value;
 			if (families) {
 				this.families.value = families;
@@ -70,10 +68,19 @@ export default class Ex05ApexConfiguration extends LightningElement {
 			this.refs.families.setCustomValidity(errorString);
 			this.refs.families.reportValidity();
 		}
+		if (!this.maxFamilies > 0) {
+			let errorString = "maxFamilies must be greater than zero";
+			output.push({
+				key: "maxFamilies",
+				errorString
+			});
+			this.refs.maxFamilies.setCustomValidity(errorString);
+			this.refs.maxFamilies.reportValidity();
+		}
 		return output;
 	}
 
-	onfamiliesChange(event) {
+	onFamiliesChange(event) {
 		let newValue = event?.detail?.value;
 		this.families.value = newValue;
 		this.handleChange(newValue, "families", "reference");
@@ -83,16 +90,10 @@ export default class Ex05ApexConfiguration extends LightningElement {
 		}
 	}
 
-	onCountFamiliesChange(event) {
+	onMaxFamiliesChange(event) {
 		let newValue = Number(event?.detail?.value);
-		this.countFamilies.value = newValue;
-		this.handleChange(newValue, "countFamilies", "Number");
-	}
-
-	onCountContactsChange(event) {
-		let newValue = Number(event?.detail?.value);
-		this.countContacts.value = newValue;
-		this.handleChange(newValue, "countContacts", "Number");
+		this.maxFamilies.value = newValue;
+		this.handleChange(newValue, "maxFamilies", "Number");
 	}
 
 	handleChange(newValue, varName, varType) {

@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <FlowTest xmlns="http://soap.sforce.com/2006/04/metadata">
-    <flowApiName>EX03_DataStructures</flowApiName>
-    <label>EX03_DataStructures_Test</label>
+    <flowApiName>Demo_DataStructures</flowApiName>
+    <label>Demo_DataStructures_Test</label>
     <testPoints>
         <elementApiName>Start</elementApiName>
         <parameters>
             <leftValueReference>$Record</leftValueReference>
             <type>InputTriggeringRecordInitial</type>
             <value>
-                <sobjectValue>{&quot;FirstName&quot;:&quot;Andrés&quot;,&quot;LastName&quot;:&quot;Pérez&quot;}</sobjectValue>
+                <sobjectValue>
+                    {&quot;FirstName&quot;:&quot;Andrés&quot;,&quot;LastName&quot;:&quot;Pérez&quot;}</sobjectValue>
             </value>
         </parameters>
     </testPoints>

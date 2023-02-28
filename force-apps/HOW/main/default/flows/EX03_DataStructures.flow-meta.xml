@@ -1,58 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <actionCalls>
-        <description>Make a call to an Apex @invocableMethod to demonstrate the use of complex data</description>
+        <description>Call Apex to get the Contact records for the Family__c records found
+            (relationship queries)</description>
         <name>Apex020</name>
-        <label>Apex020</label>
+        <label>Apex020 Get families with contacts</label>
         <locationX>176</locationX>
-        <locationY>455</locationY>
-        <actionName>EX03_DataStructures</actionName>
+        <locationY>278</locationY>
+        <actionName>EX03_QueryFamilies</actionName>
         <actionType>apex</actionType>
-        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <connector>
+            <targetReference>Screen030</targetReference>
+        </connector>
+        <flowTransactionModel>Automatic</flowTransactionModel>
         <inputParameters>
-            <name>inputContacts</name>
+            <name>families</name>
             <value>
-                <elementReference>contacts</elementReference>
+                <elementReference>Get010</elementReference>
             </value>
         </inputParameters>
         <inputParameters>
-            <name>someVariable</name>
+            <name>maxFamilies</name>
             <value>
-                <numberValue>42.0</numberValue>
+                <numberValue>50.0</numberValue>
             </value>
         </inputParameters>
         <outputParameters>
-            <assignToReference>results</assignToReference>
-            <name>outputData</name>
+            <assignToReference>response</assignToReference>
+            <name>response</name>
         </outputParameters>
     </actionCalls>
     <apiVersion>57.0</apiVersion>
-    <assignments>
-        <description>Append $Record (single contact) to a list of Contact records</description>
-        <name>Set010</name>
-        <label>Set010</label>
-        <locationX>176</locationX>
-        <locationY>335</locationY>
-        <assignmentItems>
-            <assignToReference>contacts</assignToReference>
-            <operator>Add</operator>
-            <value>
-                <elementReference>$Record__Prior</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>contacts</assignToReference>
-            <operator>Add</operator>
-            <value>
-                <elementReference>$Record</elementReference>
-            </value>
-        </assignmentItems>
-        <connector>
-            <targetReference>Apex020</targetReference>
-        </connector>
-    </assignments>
     <environments>Default</environments>
-    <interviewLabel>EX03_DataStructures {!$Flow.CurrentDateTime}</interviewLabel>
+    <interviewLabel>EX04 - TreeGrid {!$Flow.CurrentDateTime}</interviewLabel>
     <label>EX03 - DataStructures</label>
     <processMetadataValues>
         <name>BuilderType</name>
@@ -72,29 +52,48 @@
             <stringValue>LightningFlowBuilder</stringValue>
         </value>
     </processMetadataValues>
-    <processType>AutoLaunchedFlow</processType>
+    <processType>Flow</processType>
+    <recordLookups>
+        <description>SELECT * FROM Family</description>
+        <name>Get010</name>
+        <label>Get010</label>
+        <locationX>176</locationX>
+        <locationY>158</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Apex020</targetReference>
+        </connector>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>Family__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <screens>
+        <name>Screen030</name>
+        <label>Screen030 Display Apex Output</label>
+        <locationX>176</locationX>
+        <locationY>398</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>DisplayResponse</name>
+            <fieldText>&lt;p&gt;The Answer: {!response.theAnswer}&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
     <start>
         <locationX>50</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>Set010</targetReference>
+            <targetReference>Get010</targetReference>
         </connector>
-        <object>Contact</object>
-        <recordTriggerType>CreateAndUpdate</recordTriggerType>
-        <triggerType>RecordAfterSave</triggerType>
     </start>
-    <status>Draft</status>
+    <status>Active</status>
     <variables>
-        <name>contacts</name>
-        <dataType>SObject</dataType>
-        <isCollection>true</isCollection>
-        <isInput>false</isInput>
-        <isOutput>false</isOutput>
-        <objectType>Contact</objectType>
-    </variables>
-    <variables>
-        <name>results</name>
-        <apexClass>EX03_DataStructuresAuraEnabled</apexClass>
+        <name>response</name>
+        <apexClass>EX03AE_Response</apexClass>
         <dataType>Apex</dataType>
         <isCollection>false</isCollection>
         <isInput>false</isInput>
