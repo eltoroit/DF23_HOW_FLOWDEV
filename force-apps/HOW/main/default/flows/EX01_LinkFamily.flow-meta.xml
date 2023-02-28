@@ -50,7 +50,8 @@
     </processMetadataValues>
     <processType>AutoLaunchedFlow</processType>
     <recordCreates>
-        <description>Create a new Family__c record with that last name. Populate the Family__c&apos;s Id field on the record that we did not find.</description>
+        <description>Create a new Family__c record with that last name. Populate the
+            Family__c&apos;s Id field on the record that we did not find.</description>
         <name>Insert030</name>
         <label>Insert030 Create family record</label>
         <locationX>264</locationX>
@@ -90,7 +91,8 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
     <recordUpdates>
-        <description>Update the Family__c field on the Contact record based on the found record or the newly creted</description>
+        <description>Update the Family__c field on the Contact record based on the found record or
+            the newly creted</description>
         <name>Update040</name>
         <label>Update040 Update contact with family Id</label>
         <locationX>176</locationX>
@@ -109,7 +111,8 @@
         <connector>
             <targetReference>Get010</targetReference>
         </connector>
-        <filterFormula>{!$Record.LastName} != null &amp;&amp; ({!$Record.Family__c} == null || {!$Record.LastName} != {!$Record.Family__r.LastName__c})</filterFormula>
+        <filterFormula>{!$Record.LastName} != null &amp;&amp; ({!$Record.Family__c} == null ||
+            {!$Record.LastName} != {!$Record.Family__r.LastName__c})</filterFormula>
         <object>Contact</object>
         <recordTriggerType>CreateAndUpdate</recordTriggerType>
         <triggerType>RecordAfterSave</triggerType>
