@@ -7,51 +7,39 @@
         <label>Apex020 (Old) Get families with contacts</label>
         <locationX>314</locationX>
         <locationY>398</locationY>
-        <actionName>EX04_QueryFamilies</actionName>
+        <actionName>EX03_QueryFamilies</actionName>
         <actionType>apex</actionType>
         <connector>
             <targetReference>Screen030</targetReference>
         </connector>
         <flowTransactionModel>Automatic</flowTransactionModel>
         <inputParameters>
-            <name>countFamilies</name>
-            <value>
-                <numberValue>100.0</numberValue>
-            </value>
-        </inputParameters>
-        <inputParameters>
             <name>families</name>
             <value>
                 <elementReference>Get010</elementReference>
             </value>
         </inputParameters>
         <inputParameters>
-            <name>countContacts</name>
+            <name>maxFamilies</name>
             <value>
-                <numberValue>100.0</numberValue>
+                <numberValue>50.0</numberValue>
             </value>
         </inputParameters>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </actionCalls>
     <actionCalls>
         <description>Call Apex to get the Contact records for the Family__c records found
-            (relationship queries)</description>
+(relationship queries + custom properties)</description>
         <name>Apex020New</name>
         <label>Apex020 (New) Get families with contacts</label>
         <locationX>50</locationX>
         <locationY>398</locationY>
-        <actionName>Demo_QueryFamilies</actionName>
+        <actionName>Demo_CustomProperties</actionName>
         <actionType>apex</actionType>
         <connector>
             <targetReference>Screen030New</targetReference>
         </connector>
         <flowTransactionModel>Automatic</flowTransactionModel>
-        <inputParameters>
-            <name>countFamilies</name>
-            <value>
-                <numberValue>100.0</numberValue>
-            </value>
-        </inputParameters>
         <inputParameters>
             <name>families</name>
             <value>
@@ -59,7 +47,7 @@
             </value>
         </inputParameters>
         <inputParameters>
-            <name>countContacts</name>
+            <name>maxFamilies</name>
             <value>
                 <numberValue>100.0</numberValue>
             </value>
@@ -101,7 +89,7 @@
     </decisions>
     <environments>Default</environments>
     <interviewLabel>View010 {!$Flow.CurrentDateTime}</interviewLabel>
-    <label>Demo - Custom Properties</label>
+    <label>Demo: Custom Properties</label>
     <processMetadataValues>
         <name>BuilderType</name>
         <value>
@@ -162,7 +150,7 @@
         <showHeader>true</showHeader>
     </screens>
     <screens>
-        <description>Display the data in a treeGrid using LWC</description>
+        <description>Display the data in a treeGrid using LWC (Custom properties)</description>
         <name>Screen030New</name>
         <label>Screen030 (New)</label>
         <locationX>50</locationX>

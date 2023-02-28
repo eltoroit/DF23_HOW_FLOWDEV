@@ -1,4 +1,4 @@
-public with sharing class Demo_WithCustomProperties {
+public with sharing class Demo_CustomProperties {
 	@InvocableMethod(
 		label='Get Families'
 		description='Demonstrates calling Apex to get data'
@@ -8,8 +8,8 @@ public with sharing class Demo_WithCustomProperties {
 	public static List<FamilyResponse> getFamilies(List<FamilyRequest> familyRequests) {
 		// Initalize response
 		List<FamilyResponse> output = new List<FamilyResponse>();
-		FamilyResponse familyResponse = new FamilyResponse();
 		EX03AE_Response aeResponse = new EX03AE_Response();
+		FamilyResponse familyResponse = new FamilyResponse();
 		familyResponse.response = aeResponse;
 		output.add(familyResponse);
 
@@ -22,7 +22,7 @@ public with sharing class Demo_WithCustomProperties {
 			ORDER BY LastName__c
 			LIMIT :familyRequest.maxFamilies
 		]) {
-			response.add(family);
+			aeResponse.add(family);
 		}
 
 		return output;

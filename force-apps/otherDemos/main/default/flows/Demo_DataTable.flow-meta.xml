@@ -5,18 +5,12 @@
         <label>Apex020 Get families with contacts</label>
         <locationX>176</locationX>
         <locationY>278</locationY>
-        <actionName>EX04_QueryFamilies</actionName>
+        <actionName>EX03_QueryFamilies</actionName>
         <actionType>apex</actionType>
         <connector>
             <targetReference>Screen030</targetReference>
         </connector>
         <flowTransactionModel>Automatic</flowTransactionModel>
-        <inputParameters>
-            <name>countFamilies</name>
-            <value>
-                <numberValue>3.0</numberValue>
-            </value>
-        </inputParameters>
         <inputParameters>
             <name>families</name>
             <value>
@@ -24,9 +18,9 @@
             </value>
         </inputParameters>
         <inputParameters>
-            <name>countContacts</name>
+            <name>maxFamilies</name>
             <value>
-                <numberValue>10.0</numberValue>
+                <numberValue>50.0</numberValue>
             </value>
         </inputParameters>
         <storeOutputAutomatically>true</storeOutputAutomatically>
@@ -40,7 +34,7 @@
         <label>Loop040 For each FamilyType</label>
         <locationX>176</locationX>
         <locationY>518</locationY>
-        <collectionReference>Apex020.response.records</collectionReference>
+        <collectionReference>Apex020.response.familiesWithContacts</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
             <targetReference>Screen050</targetReference>
@@ -92,7 +86,7 @@
         <fields>
             <name>DebugShowData</name>
             <defaultValue>
-                <stringValue>{!Apex020.response.records}</stringValue>
+                <stringValue>{!Apex020.response.familiesWithContacts}</stringValue>
             </defaultValue>
             <fieldText>DebugShowData</fieldText>
             <fieldType>LargeTextArea</fieldType>
@@ -115,7 +109,7 @@
         <fields>
             <name>Header</name>
             <fieldText>&lt;p&gt;LastName:
-                &lt;strong&gt;{!Loop040.record.LastName__c}&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Contacts:
+                &lt;strong&gt;{!Loop040.family.LastName__c}&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Contacts:
                 &lt;strong&gt;{!Loop040.contactsCount}&lt;/strong&gt;&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
@@ -136,7 +130,7 @@
             <inputParameters>
                 <name>selectionMode</name>
                 <value>
-                    <stringValue>NO_SELECTION</stringValue>
+                    <stringValue>MULTI_SELECT</stringValue>
                 </value>
             </inputParameters>
             <inputParameters>
@@ -152,20 +146,9 @@
                 </value>
             </inputParameters>
             <inputParameters>
-                <name>maxRowSelection</name>
-                <value>
-                    <numberValue>0.0</numberValue>
-                </value>
-            </inputParameters>
-            <inputParameters>
                 <name>columns</name>
                 <value>
-                    <stringValue>[{&quot;apiName&quot;:&quot;FirstName&quot;,&quot;guid&quot;:&quot;column-e199&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:0,&quot;label&quot;:&quot;First
-                        Name&quot;,&quot;type&quot;:&quot;text&quot;},{&quot;apiName&quot;:&quot;LastName&quot;,&quot;guid&quot;:&quot;column-a608&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:1,&quot;label&quot;:&quot;Last
-                        Name&quot;,&quot;type&quot;:&quot;text&quot;},{&quot;apiName&quot;:&quot;Family__c&quot;,&quot;guid&quot;:&quot;column-dce3&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:2,&quot;label&quot;:&quot;Family&quot;,&quot;type&quot;:&quot;customRichText&quot;},{&quot;apiName&quot;:&quot;FamilyLastName__c&quot;,&quot;guid&quot;:&quot;column-f37b&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:true,&quot;customHeaderLabel&quot;:&quot;Last
-                        name
-                        (lookup)&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:3,&quot;label&quot;:&quot;Family&apos;s
-                        Last Name&quot;,&quot;type&quot;:&quot;customRichText&quot;}]</stringValue>
+                    <stringValue>[{&quot;apiName&quot;:&quot;FirstName&quot;,&quot;guid&quot;:&quot;column-7a06&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:0,&quot;label&quot;:&quot;First Name&quot;,&quot;type&quot;:&quot;text&quot;},{&quot;apiName&quot;:&quot;LastName&quot;,&quot;guid&quot;:&quot;column-18cd&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:1,&quot;label&quot;:&quot;Last Name&quot;,&quot;type&quot;:&quot;text&quot;},{&quot;apiName&quot;:&quot;Family__c&quot;,&quot;guid&quot;:&quot;column-3904&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:2,&quot;label&quot;:&quot;Family&quot;,&quot;type&quot;:&quot;customRichText&quot;},{&quot;apiName&quot;:&quot;FamilyLastName__c&quot;,&quot;guid&quot;:&quot;column-02ca&quot;,&quot;editable&quot;:false,&quot;hasCustomHeaderLabel&quot;:false,&quot;customHeaderLabel&quot;:&quot;&quot;,&quot;wrapText&quot;:true,&quot;order&quot;:3,&quot;label&quot;:&quot;Family&apos;s Last Name&quot;,&quot;type&quot;:&quot;customRichText&quot;}]</stringValue>
                 </value>
             </inputParameters>
             <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>

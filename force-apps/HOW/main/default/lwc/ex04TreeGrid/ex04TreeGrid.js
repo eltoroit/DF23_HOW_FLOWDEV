@@ -29,7 +29,6 @@ export default class Ex04TreeGrid extends NavigationMixin(LightningElement) {
 		return this.records;
 	}
 	set familyTypes(value) {
-		debugger;
 		if (value.familiesWithContacts) {
 			this.records = value.familiesWithContacts;
 			this.gridData = this.records.map((familyWithContacts) => {

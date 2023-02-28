@@ -32,6 +32,11 @@
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
         <fields>
+            <name>REMEMBER</name>
+            <fieldText>&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong style=&quot;font-size: 20px; color: rgb(255, 0, 0);&quot;&gt;&lt;span class=&quot;ql-cursor&quot;&gt;﻿&lt;/span&gt;Do not forget&lt;/strong&gt;&lt;span style=&quot;font-size: 20px; color: rgb(255, 0, 0);&quot;&gt; to &quot;Opt in to Reactive Screens Beta&quot; in Setup &amp;gt; Process Automation Settings&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
             <name>FlowComponents</name>
             <fieldText>Flow Components</fieldText>
             <fieldType>RegionContainer</fieldType>
