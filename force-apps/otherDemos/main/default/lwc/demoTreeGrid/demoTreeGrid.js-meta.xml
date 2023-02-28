@@ -2,13 +2,14 @@
 <LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>55.0</apiVersion>
     <isExposed>true</isExposed>
-    <masterLabel>Family Tree Grid (EX05)</masterLabel>
+    <masterLabel>Family Tree Grid (Demo)</masterLabel>
     <targets>
         <target>lightning__FlowScreen</target>
     </targets>
     <targetConfigs>
-        <targetConfig targets="lightning__FlowScreen" configurationEditor="c-ex05-lwc-configuration">
-            <property name="familyTypes" label="Family Types" type="apex://EX04_FamilyTypeCollectionAuraEnabled" role="inputOnly"/>
+        <targetConfig targets="lightning__FlowScreen" configurationEditor="c-demo-lwc-configuration">
+            <property name="familyTypes" label="Family Types"
+                type="apex://EX04_FamilyTypeCollectionAuraEnabled" role="inputOnly" />
         </targetConfig>
- </targetConfigs>
+    </targetConfigs>
 </LightningComponentBundle>

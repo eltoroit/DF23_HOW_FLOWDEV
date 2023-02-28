@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <actionCalls>
-        <description>Call Apex to get the Contact records for the Family__c records found (relationship queries)</description>
+        <description>Call Apex to get the Contact records for the Family__c records found
+            (relationship queries)</description>
         <name>Apex020</name>
         <label>Apex020 (Old) Get families with contacts</label>
         <locationX>314</locationX>
@@ -33,12 +34,13 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </actionCalls>
     <actionCalls>
-        <description>Call Apex to get the Contact records for the Family__c records found (relationship queries)</description>
+        <description>Call Apex to get the Contact records for the Family__c records found
+            (relationship queries)</description>
         <name>Apex020New</name>
         <label>Apex020 (New) Get families with contacts</label>
         <locationX>50</locationX>
         <locationY>398</locationY>
-        <actionName>EX05_QueryFamilies</actionName>
+        <actionName>Demo_QueryFamilies</actionName>
         <actionType>apex</actionType>
         <connector>
             <targetReference>Screen030New</targetReference>
@@ -99,7 +101,7 @@
     </decisions>
     <environments>Default</environments>
     <interviewLabel>View010 {!$Flow.CurrentDateTime}</interviewLabel>
-    <label>EX05 - Custom Properties</label>
+    <label>Demo - Custom Properties</label>
     <processMetadataValues>
         <name>BuilderType</name>
         <value>
@@ -170,7 +172,7 @@
         <allowPause>true</allowPause>
         <fields>
             <name>TreeGridNew</name>
-            <extensionName>c:ex05TreeGrid</extensionName>
+            <extensionName>c:demoTreeGrid</extensionName>
             <fieldType>ComponentInstance</fieldType>
             <inputParameters>
                 <name>familyTypes</name>

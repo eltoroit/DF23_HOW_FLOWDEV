@@ -1,6 +1,6 @@
 import { api, LightningElement, track } from "lwc";
 
-export default class Ex05LwcConfiguration extends LightningElement {
+export default class DemoLwcConfiguration extends LightningElement {
 	_inputVariables;
 	_builderContext;
 
