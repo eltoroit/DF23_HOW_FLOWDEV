@@ -68,6 +68,7 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
     <screens>
+        <description>Displays &quot;The Answer&quot;</description>
         <name>Screen030</name>
         <label>Screen030 Display Apex Output</label>
         <locationX>176</locationX>
@@ -76,8 +77,8 @@
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
         <fields>
-            <name>DisplayResponse</name>
-            <fieldText>&lt;p&gt;The Answer: {!response.theAnswer}&lt;/p&gt;</fieldText>
+            <name>TheAnswer</name>
+            <fieldText>&lt;p&gt;The Answer: &lt;span style=&quot;color: rgb(68, 68, 68); background-color: rgb(255, 255, 255);&quot;&gt;{!response.theAnswer}&lt;/span&gt;&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
         <showFooter>true</showFooter>
@@ -90,7 +91,7 @@
             <targetReference>Get010</targetReference>
         </connector>
     </start>
-    <status>Active</status>
+    <status>Draft</status>
     <variables>
         <name>response</name>
         <apexClass>EX03AE_Response</apexClass>
