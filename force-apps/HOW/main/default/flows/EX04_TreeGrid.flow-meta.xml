@@ -107,7 +107,7 @@
             <targetReference>Get010</targetReference>
         </connector>
     </start>
-    <status>Draft</status>
+    <status>Active</status>
     <variables>
         <name>response</name>
         <apexClass>EX03AE_Response</apexClass>
