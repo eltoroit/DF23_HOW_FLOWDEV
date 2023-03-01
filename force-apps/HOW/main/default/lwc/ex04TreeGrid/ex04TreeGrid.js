@@ -1,6 +1,5 @@
 import { api, LightningElement } from "lwc";
 import { NavigationMixin } from "lightning/navigation";
-import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 
 const GRID_COLUMNS = [
 	{
@@ -23,6 +22,7 @@ const GRID_COLUMNS = [
 export default class Ex04TreeGrid extends NavigationMixin(LightningElement) {
 	records;
 	gridData = [];
+	@api familyTypes;
 	gridColumns = GRID_COLUMNS;
 
 	@api
@@ -30,15 +30,15 @@ export default class Ex04TreeGrid extends NavigationMixin(LightningElement) {
 		return this.records;
 	}
 	set familyData(value) {
-		if (value.familiesWithContacts) {
-			this.records = value.familiesWithContacts;
-			this.gridData = this.records.map((familyWithContacts) => {
+		if (value.records) {
+			this.records = value.records;
+			this.gridData = this.records.map((familyType) => {
 				const family = {
-					Id: familyWithContacts.family.Id,
-					LastName: `${familyWithContacts.family.LastName__c} (${familyWithContacts.contactsCount} members)`,
+					Id: familyType.record.Id,
+					LastName: `${familyType.record.LastName__c} (${familyType.contacts.length} members)`,
 					_children: []
 				};
-				familyWithContacts.contacts.forEach((contact) => {
+				familyType.contacts.forEach((contact) => {
 					family._children.push({
 						Id: contact.Id,
 						FirstName: contact.FirstName,
@@ -57,12 +57,6 @@ export default class Ex04TreeGrid extends NavigationMixin(LightningElement) {
 			isValid: false,
 			errorMessage: "You can't go past this screen!"
 		};
-        this.dispatchEvent(new ShowToastEvent({
-            title: output.errorMessage,
-            message: "",
-            variant: "error",
-			mode: "sticky"
-        }));
 		return output;
 	}
 

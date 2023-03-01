@@ -78,7 +78,9 @@
         <allowPause>true</allowPause>
         <fields>
             <name>TheAnswer</name>
-            <fieldText>&lt;p&gt;&lt;span style=&quot;color: rgb(68, 68, 68); background-color: rgb(255, 255, 255);&quot;&gt;The Answer: {!response.theAnswer}&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldText>&lt;p&gt;&lt;span style=&quot;color: rgb(68, 68, 68); background-color:
+                rgb(255, 255, 255);&quot;&gt;The Answer:
+                {!response.theAnswer}&lt;/span&gt;&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
