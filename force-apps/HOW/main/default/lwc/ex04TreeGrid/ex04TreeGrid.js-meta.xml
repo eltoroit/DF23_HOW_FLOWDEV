@@ -8,7 +8,8 @@
     </targets>
     <targetConfigs>
         <targetConfig targets="lightning__FlowScreen">
-            <property name="familyTypes" label="Family Types" type="apex://EX03AE_Response" role="inputOnly"/>
+            <property name="familyData" label="Family Data" type="apex://EX03AE_Response"
+                role="inputOnly" />
         </targetConfig>
- </targetConfigs>
+    </targetConfigs>
 </LightningComponentBundle>

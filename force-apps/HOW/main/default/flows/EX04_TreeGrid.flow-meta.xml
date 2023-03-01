@@ -25,7 +25,10 @@
                 <numberValue>50.0</numberValue>
             </value>
         </inputParameters>
-        <storeOutputAutomatically>true</storeOutputAutomatically>
+        <outputParameters>
+            <assignToReference>response</assignToReference>
+            <name>response</name>
+        </outputParameters>
     </actionCalls>
     <apiVersion>57.0</apiVersion>
     <environments>Default</environments>
@@ -67,20 +70,25 @@
     <screens>
         <description>Display the data in a treeGrid using LWC</description>
         <name>Screen030</name>
-        <label>Screen030</label>
+        <label>Screen030 Display Apex Output</label>
         <locationX>176</locationX>
         <locationY>398</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
         <fields>
+            <name>TheAnswer</name>
+            <fieldText>&lt;p&gt;&lt;span style=&quot;color: rgb(68, 68, 68); background-color: rgb(255, 255, 255);&quot;&gt;The Answer: {!response.theAnswer}&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
             <name>TreeGrid</name>
             <extensionName>c:ex04TreeGrid</extensionName>
             <fieldType>ComponentInstance</fieldType>
             <inputParameters>
-                <name>familyTypes</name>
+                <name>familyData</name>
                 <value>
-                    <elementReference>Apex020.response</elementReference>
+                    <elementReference>response</elementReference>
                 </value>
             </inputParameters>
             <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
@@ -97,5 +105,13 @@
             <targetReference>Get010</targetReference>
         </connector>
     </start>
-    <status>Active</status>
+    <status>Draft</status>
+    <variables>
+        <name>response</name>
+        <apexClass>EX03AE_Response</apexClass>
+        <dataType>Apex</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
 </Flow>

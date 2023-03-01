@@ -26,10 +26,10 @@ export default class Ex04TreeGrid extends NavigationMixin(LightningElement) {
 	gridColumns = GRID_COLUMNS;
 
 	@api
-	get familyTypes() {
+	get familyData() {
 		return this.records;
 	}
-	set familyTypes(value) {
+	set familyData(value) {
 		if (value.familiesWithContacts) {
 			this.records = value.familiesWithContacts;
 			this.gridData = this.records.map((familyWithContacts) => {
