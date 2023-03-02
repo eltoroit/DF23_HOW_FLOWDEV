@@ -1,5 +1,6 @@
 import { api, LightningElement } from "lwc";
 import { NavigationMixin } from "lightning/navigation";
+import { ShowToastEvent } from "lightning/platformShowToastEvent";
 
 const GRID_COLUMNS = [
 	{
