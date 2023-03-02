@@ -137,7 +137,7 @@
             <extensionName>c:ex04TreeGrid</extensionName>
             <fieldType>ComponentInstance</fieldType>
             <inputParameters>
-                <name>familyTypes</name>
+                <name>familyData</name>
                 <value>
                     <elementReference>Apex020.response</elementReference>
                 </value>
@@ -163,7 +163,7 @@
             <extensionName>c:demoTreeGrid</extensionName>
             <fieldType>ComponentInstance</fieldType>
             <inputParameters>
-                <name>familyTypes</name>
+                <name>familyData</name>
                 <value>
                     <elementReference>Apex020New.response</elementReference>
                 </value>
