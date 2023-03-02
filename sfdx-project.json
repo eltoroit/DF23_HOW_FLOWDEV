@@ -5,6 +5,10 @@
 			"default": true
 		},
 		{
+			"path": "force-apps/otherDemos",
+			"default": false
+		},
+		{
 			"path": "force-apps/doNotDeploy",
 			"default": false
 		}

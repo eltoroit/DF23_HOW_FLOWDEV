@@ -4,7 +4,7 @@ export default class DemoLwcConfiguration extends LightningElement {
 	_inputVariables;
 	_builderContext;
 
-	@track familyTypes = {
+	@track familyData = {
 		value: null,
 		options: []
 	};
@@ -17,11 +17,11 @@ export default class DemoLwcConfiguration extends LightningElement {
 		if (value) {
 			this._inputVariables = value;
 			console.log(this._inputVariables);
-			let familyTypes = this.inputVariables.find(({ name }) => name === "familyTypes")?.value;
-			if (familyTypes) {
-				this.familyTypes.value = familyTypes;
+			let familyData = this.inputVariables.find(({ name }) => name === "familyData")?.value;
+			if (familyData) {
+				this.familyData.value = familyData;
 			} else {
-				this.familyTypes.value = "";
+				this.familyData.value = "";
 			}
 		}
 	}
@@ -34,20 +34,20 @@ export default class DemoLwcConfiguration extends LightningElement {
 		if (value) {
 			this._builderContext = value;
 			console.log(this._builderContext);
-			this.familyTypes.options = this._builderContext.actionCalls.map((rl) => ({
+			this.familyData.options = this._builderContext.actionCalls.map((rl) => ({
 				value: `${rl.name}.response`,
 				label: rl.label,
 				description: rl.description
 			}));
-			this.familyTypes.value = this.familyTypes.options[0].value;
-			this.familyTypes.options.unshift({ value: "", label: "None", description: "Blank" });
+			this.familyData.value = this.familyData.options[0].value;
+			this.familyData.options.unshift({ value: "", label: "None", description: "Blank" });
 		}
 	}
 
-	onfamilyTypesChange(event) {
+	onFamilyDataChange(event) {
 		let newValue = event?.detail?.value;
-		this.familyTypes.value = newValue;
-		this.handleChange(newValue, "familyTypes", "reference");
+		this.familyData.value = newValue;
+		this.handleChange(newValue, "familyData", "reference");
 	}
 
 	handleChange(newValue, varName, varType) {

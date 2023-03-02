@@ -8,8 +8,10 @@
     </targets>
     <targetConfigs>
         <targetConfig targets="lightning__FlowScreen" configurationEditor="c-demo-lwc-configuration">
-            <property name="familyTypes" label="Family Types" type="apex://EX03AE_Response"
+            <property name="familyData" label="Family Data" type="apex://EX03AE_Response"
                 role="inputOnly" />
+            <property name="familyTypes" label="Family Types"
+                type="apex://EX04_FamilyTypeCollectionAuraEnabled" role="inputOnly" />
         </targetConfig>
     </targetConfigs>
 </LightningComponentBundle>
