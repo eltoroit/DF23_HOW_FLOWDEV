@@ -8,6 +8,10 @@
         <apexClass>EX02_LinkFamily</apexClass>
         <enabled>true</enabled>
     </classAccesses>
+    <classAccesses>
+        <apexClass>Demo_DataStructures</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
     <fieldPermissions>
         <editable>true</editable>
         <field>Contact.AccountId</field>

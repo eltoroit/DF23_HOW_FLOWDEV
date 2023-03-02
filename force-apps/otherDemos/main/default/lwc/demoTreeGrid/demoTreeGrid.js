@@ -1,5 +1,6 @@
 import { api, LightningElement } from "lwc";
 import { NavigationMixin } from "lightning/navigation";
+import { ShowToastEvent } from "lightning/platformShowToastEvent";
 
 const GRID_COLUMNS = [
 	{
@@ -22,13 +23,14 @@ const GRID_COLUMNS = [
 export default class DemoTreeGrid extends NavigationMixin(LightningElement) {
 	records;
 	gridData = [];
+	@api familyTypes;
 	gridColumns = GRID_COLUMNS;
 
 	@api
-	get familyTypes() {
+	get familyData() {
 		return this.records;
 	}
-	set familyTypes(value) {
+	set familyData(value) {
 		if (value.familiesWithContacts) {
 			this.records = value.familiesWithContacts;
 			this.gridData = this.records.map((familyWithContacts) => {
@@ -56,6 +58,14 @@ export default class DemoTreeGrid extends NavigationMixin(LightningElement) {
 			isValid: false,
 			errorMessage: "You can't go past this screen!"
 		};
+		this.dispatchEvent(
+			new ShowToastEvent({
+				title: output.errorMessage,
+				message: "",
+				variant: "error",
+				mode: "sticky"
+			})
+		);
 		return output;
 	}
 
