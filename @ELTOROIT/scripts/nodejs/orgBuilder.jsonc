@@ -1,0 +1,30 @@
+{
+	"settings": {
+		"days": 1,
+		"alias": "soDEMO",
+		"OpenBrowser": true,
+		"QuitOnErrors": true,
+		"UserOnScreen": true
+	},
+	"steps": [
+		// Prepare environment
+		"ValidateETCopyData",
+		"BackupAlias",
+
+		// Creating Scratch org
+		"CreateScratchOrg",
+		"ShowDeployPage",
+		"PushMetadata",
+		{ "AssignPermissionSet": "HOW" },
+		{ "DeployProfile": "force-apps/doNotDeploy/main/default/profiles/Admin.profile-meta.xml" },
+
+		// // Loading Data
+		{ "ETCopyData": "./@ELTOROIT/data" },
+		{ "ExecuteApex": "@ELTOROIT/scripts/apex/SetUserRecord.apex" },
+		"GeneratePassword",
+		"CreateFinestDebugLevel",
+
+		// Print results
+		"ShowFinalSuccess"
+	]
+}
